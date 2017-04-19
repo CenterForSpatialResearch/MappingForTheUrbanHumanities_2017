@@ -102,21 +102,32 @@ Option 2:
 
 ![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/13_SelectByExpression.png)
 
-Either route will open the `Select by Expression` tool. We can be sure we are selecting features from the correct layer from the header of this dialogue box. Here we see that the header reads “Select by expression - populated_places” and because we will select the cities first we know we are selecting features from the correct layer. 
+Either route will open the `Select by Expression` tool. We can be sure we are selecting features from the correct layer from the header of this dialogue box. We see that the header reads “Select by expression - populated_places” and because we will select the cities first we know we are selecting features from the correct layer. 
 
 If we click on any of the terms in the central box (highlighted in magenta) a description of it will appear on the right side (highlighted in blue). We will combine the field name with other operators which we will find in the magenta box in order to build an expression in the green box on the left side. 
 
 ![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/15_SelectExpressionMenu_opt.png)
 
-We want to select just those cities with a maximum estimated population of greater than two million. To do this we will expand 'Fields and Values` and select `max_pop`. **Double-click**  on `max_pop` and it will appear in the expression box on the right. Next we will open `Operators` and double-click on the greater than symbol (>). We will then type in 2,000,000. Your expression should now look like the following. 
+We want to select just those cities with a maximum estimated population of greater than two million. 
+
+To do this we will expand `Fields and Values` and select `max_pop`. 
+* **Double-click**  on `max_pop` and it will appear in the expression box on the right. 
+* Next we will open `Operators` and double-click on the greater than symbol (>). 
+* Then type in 2,000,000. Your expression should now look like the following. 
 
 ![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/16_SelectionExpression_Final.png)
 
-**Click** `Select`. You should notice that some of the populated_places points will turn yellow. In addition at the bottom left corner of your QGIS project the footer will tell you how many features were selected: we see that 215 cities were selected. 
+* **Click** `Select`. 
+
+You should notice that some of the populated_places points will turn yellow. In addition at the bottom left corner of your QGIS project the footer will tell you how many features were selected: we see that 215 cities were selected. 
 
 ![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/17_SelectOutcome.png)
 
-We will now save those 215 cities as a separate shapefile, just like we did for the admin_0_countries layer after we joined the UN population estimates to it. **Right-Click** populated_places in the Layers menu, **select** `Save As`. Then in the dialogue box which opens select `Save only selected features`, and save the shapefile in MappingData\Shape as populated_places_2mil.shp. This will then be added to our map as a new layer. In order to see the new layer clear your selection by clicking the `Deselect features from all layers button.`
+We will now save those 215 cities as a separate shapefile, just like we did for the admin_0_countries layer after we joined the UN population estimates to it. 
+
+* **Right-Click** populated_places in the Layers menu, **select** `Save As`. 
+* Then in the dialogue box which opens select `Save only selected features`, and save the shapefile in MappingData\Shape as populated_places_2mil.shp. 
+* This will then be added to our map as a new layer. In order to see the new layer clear your selection by clicking the `Deselect features from all layers button.`
 
 ![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/18_Deselect.png)
 
@@ -124,11 +135,13 @@ We will now save those 215 cities as a separate shapefile, just like we did for 
 
 As we outlined above  we are interested in finding out how many countries have fewer than seven million inhabitants, and then how many cities with over two million inhabitants fall within those boundaries.  In order to answer these two questions we will need to perform a spatial query by layering these two datasets rather than merely querying within the attribute table of one dataset. 
 
-**Open** the attribute table for admin_0_countriesUNPop and select the `select features using an expression` tool. We will again select by expression in order to select the countries with fewer than seven million inhabitants. Use the expression builder as we did above with the populated places in order to select the countries with fewer than seven million inhabitants. Remember the dataset is expressed in thousands thus 7,000,000 will appear in the data as 7000. Your expression should read:  `"Pop_2010"  < 7000`
+* **Open** the attribute table for admin_0_countriesUNPop and select the `select features using an expression` tool. We will again select by expression in order to select the countries with fewer than seven million inhabitants. Use the expression builder as we did above with the populated places in order to select the countries with fewer than seven million inhabitants. Remember the dataset is expressed in thousands thus 7,000,000 will appear in the data as 7000. 
+* Your expression should read:  `"Pop_2010"  < 7000`
 
 The header bar of the attribute table will indicate that 124 of 238 features were selected. 
 
-Now, we will use this selection to identify which cities of greater than two million people are within countries with fewer than seven million people. To do this we will use the select by location tool. On the menu bar navigate to `Vector`>`Research Tools`>`Select By Location`. In the dialogue box that opens make the following selections: 
+Now, we will use this selection to identify which cities of greater than two million people are within countries with fewer than seven million people. To do this we will use the select by location tool. 
+* On the menu bar navigate to `Vector`>`Research Tools`>`Select By Location`. In the dialogue box that opens make the following selections: 
 
 ![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/19_SelectLocation.png)
 
@@ -136,9 +149,15 @@ In the bottom left hand corner of your QGIS window you will see that five popula
 
 ![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/20_SelectedFeatures.png)
 
+### On Your Own
+Now on your own use select by attributes and select by location to answer the following questions: 
+* How many countries contain cities with greater than 7 million inhabitants?  
+
 #### Symbolizing World Populations
 
 Now that we have these three different layers we can begin to create maps that highlight the differences between these different ways to measure population. We will compose a map that symbolizes each of our three data layers differently. We will use graduated symbols to express city population, a choropleth map for population by country and a classified color ramp for the gridded population. We will then go over cartographic conventions adding a legend and scale bar to the map and exporting as a PDF. 
+
+*Follow along as we demo this next section, and then create your map composition on your own. Be ready to discuss it in class next week.*
 
 **Proportional  symbols**
 
@@ -213,6 +232,8 @@ Last we will add two text boxes, one with a title for the map and another with a
 ![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/27_PrintComp3.png)
 
 Finally use one of the export options circled in blue above to save the map composition as an image file, PDF, or SVG. 
+
+* Make this map composition your own – experiment with changing colors, and symbol sizes and the locations of the text and scale bars. The aim is to create a design that you are pleased with, that is clear, and follows cartographic conventions. 
 
 ![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/Mapping_WorldPopulation.png)
 
