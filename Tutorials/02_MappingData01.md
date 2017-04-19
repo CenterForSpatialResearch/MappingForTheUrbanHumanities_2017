@@ -149,7 +149,7 @@ In the bottom left hand corner of your QGIS window you will see that five popula
 
 ![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/20_SelectedFeatures.png)
 
-### On Your Own
+#### On Your Own
 Now on your own use select by attributes and select by location to answer the following questions: 
 * How many countries contain cities with greater than 7 million inhabitants?  
 
