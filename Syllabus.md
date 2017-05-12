@@ -92,10 +92,9 @@ Studio@Butler
 **Monday, May 29 | No Workshop, Memorial Day**
 
 
-**Tuesday, May 30 | Making Public Work** 
-Studio@Butler
+**Tuesday, May 30 | Making Public Work** 	Studio@Butler
 
-* **Due:** Deliverables from exercises from week one. Printed 8.5x11 in color.
+* **Due:** Deliverables from week one tutorials. Printed 8.5x11 in color.
 
 * **Topics**			Pinup and group discussion of week 1 work, Examples from the GeoHumanities, Webmaps
 
