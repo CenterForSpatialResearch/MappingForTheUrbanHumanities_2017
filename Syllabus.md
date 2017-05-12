@@ -32,7 +32,7 @@ The course aims to equip faculty with a grasp of the methods and methodologies o
 
 
 ### Materials 
-* Laptop with qGIS 2.14 installed 
+* Laptop with qGIS 2.14 installed (see instructions [here](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/blob/master/Resources/DownloadingQGIS.md))
 * A three button mouse
 * All course tutorials will be provided and available via [Github](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/tree/master/Tutorials)
 * A three button mouse (this is highly *highly* recommended)
@@ -49,13 +49,13 @@ Our projects generally involve collaborations with researchers and advocates acr
 **Monday, May 22 | Introduction**
 Studio@Butler
 * **Topics:** Introductions, What is GIS?, Course overview: Mapping, Making, Analyzing
-* **Tutorial:** Mapping Data 00: Adding Layers to a Map
+* **Tutorial:** [Mapping Data 00](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/blob/master/Tutorials/01_MappingData00.md): Adding Layers to a Map
 
 **Tuesday, May 23 | Mapping Data 01**      	
 Studio@Butler
 
 * **Topics:** GIS Data Types: Vector & Raster; Quantitative & Qualitative, Fundamentals of Cartography, Symbology, Classification			
-* **Tutorial:** Mapping Data 01: Mapping World Populations
+* **Tutorial:** [Mapping Data 01](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/blob/master/Tutorials/02_MappingData01.md): Mapping World Populations
 	* *Population by Country*
 	* *CEISEN Gridded Population of the World*
 			
@@ -63,7 +63,7 @@ Studio@Butler
 **Wednesday, May 24 | Mapping Data 02**
 Studio@Butler
 * **Topics:** Coordinate Reference Systems & Projection 							
-* **Tutorial:** Mapping Data 02: Map Projections & Population Density
+* **Tutorial:** [Mapping Data 02](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/blob/master/Tutorials/03_MappingData02.md): Map Projections & Population Density
 	* *U.S. Population by County 1850, 1870 Historical Census*
 	* *U.S. Rail Lines 1850, 1870*
 
@@ -73,7 +73,7 @@ Studio@Butler
 * **Topics:** Where GIS Data Comes From, Georeferencing, Digitizing 	
 						
 * **Tutorial:** 
-	* Making Data 01: Working with Historical Maps
+	* [Making Data 01](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/blob/master/Tutorials/04_MakingData01.md): Working with Historical Maps
 		* *East Bronx c. 1902: “Map or plan showing the system of streets, avenues, public squares and places, parks, bridges, etc. in that part of the borough of the Bronx, City of New York lying easterly of the Bronx River.”*
 
 
@@ -82,10 +82,10 @@ Studio@Butler
 * **Topics:** Digitizing, Geocoding	
 						
 * **Tutorials:** 
-	* Making Data 01 (con’t): Working with Historical Maps
+	* [Making Data 02](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/blob/master/Tutorials/05_MakingData02.md): Digitizing Features from Historical Maps
 		* *East Bronx c. 1902: “Map or plan showing the system of streets, avenues, public squares and places, parks, bridges, etc. in that part of the borough of the Bronx, City of New York lying easterly of the Bronx River.”*
 
-	* Making Data 02: Geocoding Music 
+	* [Making Data 03](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/blob/master/Tutorials/06_MakingData03.md): Geocoding Music 
 		* *Reference USA Database of Music Related Businesses c. 2015*
 				
 
@@ -110,7 +110,7 @@ Studio@Butler
 Spatial Joins, Proportional Split Estimation,
 Working with Census Data, Modifiable Arial Unit Problem
 						
-* **Tutorial:**		Analyzing Data 01: Libraries, Education, and Language
+* **Tutorial:**		[Analyzing Data 01](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/blob/master/Tutorials/08_AnalyzingData01.md): Libraries, Education, and Language
 	* *NYC Branch Libraries*
 	* *American Community Survey Language Spoken by Census Tract* 
 	* *NYC Board of Education Elementary School Locations*
@@ -122,7 +122,7 @@ Studio@Butler
 * **Topics**			
 			Geoprocessing with Rasters, Raster Classification, Density Maps
 						
-* **Tutorials:** 	Analyzing Data 02: Concentrations of Libraries and Education 
+* **Tutorials:** 	[Analyzing Data 02](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/blob/master/Tutorials/09_AnalyzingData02.md): Concentrations of Libraries and Education 
 	* *NYC Branch Libraries*
 	* *NYC Board of Education Elementary School Locations*
 
