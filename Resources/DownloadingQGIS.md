@@ -1,12 +1,12 @@
 ## Downloading QGIS
 
-The tutorials for *Mapping for the Urban Humanities* are written for QGIS version 2.8 (Wein), thus its best that you download this version of the program. 
+We will be using QGIS 2.14 (Essen) which is the most recent Long Term Release of the program. Please download this version of the program. 
 
 ### Instructions for PC Users
 PC users can download QGIS here and follow the instructions provided by the installer:
 
-* for 32 bit: [QGIS 2.8](http://qgis.org/downloads/QGIS-OSGeo4W-2.8.9-1-Setup-x86.exe)
-* for 64 bit: [QGIS 2.8](http://qgis.org/downloads/QGIS-OSGeo4W-2.8.9-1-Setup-x86_64.exe)
+* for 32 bit: [QGIS 2.14](http://qgis.org/downloads/QGIS-OSGeo4W-2.14.10-1-Setup-x86.exe)
+* for 64 bit: [QGIS 2.14](http://qgis.org/downloads/QGIS-OSGeo4W-2.14.10-1-Setup-x86_64.exe)
 
 (To ditermine whether you are running a 64-bit or Windows look under Start Menu > Control Panel > System)
 
@@ -15,7 +15,7 @@ Follow the prompts on the installer and keep all default settings.
 ### Instructions for Mac Users
 Mac users must install several packages which support QGIS: GDAL, NumPy, matplotlib, and then QGIS. To avoid any confusion we have included instructions here. (Mac users need to be running OS X 10.8 or higher to run QGIS). 
 
-1. Download this installer: [QGIS 2.8 for Mac](http://www.kyngchaos.com/files/software/qgis/QGIS-2.8.4-1.dmg)
+1. Download this installer: [QGIS 2.14 for Mac](http://www.kyngchaos.com/files/software/qgis/QGIS-2.14.10-1.dmg)
 
 2. Once the download has completed, open the QGIS-2.8.4-1.dmg installer. You will see the following: 
  ![img](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Resources/Images/InstallMac01-a.png)

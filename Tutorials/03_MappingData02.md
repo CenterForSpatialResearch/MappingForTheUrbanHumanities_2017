@@ -83,7 +83,7 @@ Now we can join the 1850 population data to the county polygons for 1850 and beg
 
 **Launch** QGIS. 
 
-First add the other vector data layers we will be working with using the `add vector layer` button and then navigating to Course_Data/MappingData/Shape and adding 
+First add the other vector data layers we will be working with using the `add vector layer` button and then navigating to Course_Data/MappingData/Shape and adding: 
 
 * USCounty_1870_Albers_PopJoin-1.shp 
 * USCounty_1850_Albers.shp
@@ -155,7 +155,7 @@ Any spatial data format is associated with a coordinate reference system, either
 
 Similarly, each map project has a coordinate reference system on which it bases its visualizations and calculations of your spatial data. The coordinate reference system (either projected or not) of your map project is set automatically by the first layer that you add to it. If you add any subsequent data layers to the map that have different projection systems QGIS will visualize them to match the coordinate reference system of the first data layer. This is called an “on the fly” CRS transformation. We can also change the coordinate reference system (CRS) of the map project “on the fly” and thus change the appearance of the projection for all the data layers on the map. 
 
-However, “on the fly” CRS transformations do not actually change the underlying data. Thus for any analysis or comparisons across multiple data layers it is important that we manually change the coordinate reference system so that it is the same across each of our data layers. 
+However, “on the fly” CRS transformations do not actually change the underlying data. Thus for any analysis or comparisons across multiple data layers it is important that we manually change the coordinate reference system so that it is the same across each of our data layers.
 
 Recall, our goal in this portion of the exercise is to observe the impacts of changing projections visually and quantitatively. 
 
@@ -189,15 +189,23 @@ Using the field calculator we will be able to add an additional column to the at
 
 The field calculator functions nearly identically to the select features using an expression tool that we used in the previous exercise. 
 
-Calculate population density per square kilometer of each county based on the new area under the UTM Zone 10N projection, save this information in a new field called Dens_UTKm. Be sure to change the output field type to `decimal number (real)`. Set the output field width to 10, and the precision to 3. And construct the expression shown below. (Note: we have divided the area by 1,000,000 because the units of the UTM projection are square meters). Click `OK`.
+Calculate population density per square kilometer of each county based on the new area under the UTM Zone 10N projection:
+* Save this information in a new field called Dens_UTKm. 
+* Be sure to change the output field type to `decimal number (real)`.
+* Set the output field width to 10, and the precision to 3. 
+* And construct the expression shown below. 
+* (Note: we have divided the area by 1,000,000 because the units of the UTM projection are square meters). 
+* Click `OK`.
 
 ![add](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData02/14_AreaCalc.png)
 
-Now click the toggle editing mode to save the new field. Sort the attribute table by the Albers Equal Area projection population density (do this by clicking on Area_AlbKm) and compare these values with the UTM Zone 10N population density. You’ll notice they’re vastly different.  
+Now click the toggle to exit from editing mode to save the new field. Sort the attribute table by the Albers Equal Area projection population density (do this by clicking on Area_AlbKm) and compare these values with the UTM Zone 10N population density. You’ll notice they’re vastly different.  
 
 ![add](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData02/16_ToggleEdit.png)
 
 Close the attribute table. 
+
+##### On Your Own: 
 
 #### Expressing differences in population density in a choropleth map
 
@@ -216,6 +224,8 @@ Next open the properties menu of US_county_1870_UTM10_PopJoin copy, load the lay
 Toggle the two layers back and forth and note the areas of the US with the greatest change in population density. 
 
 Create a new print composer with a legend, scale bar, and titles of the U.S. population density by county in 1870 calculated using the UTM Zone 10 projection. Export this as a PDF. Then repeat for the population density calculated using the Albers projection.
+
+* Create a compelling map composition that highlights the differences in populations density calculated using these two projection systems. Be ready to present this in class.  
 
 Because we have gone over the basics of using the print composer in Mapping Data 01 we will not go through these steps explicitly. (If you need a refresher on the major functions of the print composer refer to the detailed instructions in [Mapping Data 01](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/2_MappingData01.md)).
 
