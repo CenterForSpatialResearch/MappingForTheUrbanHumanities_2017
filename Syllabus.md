@@ -32,7 +32,7 @@ The course aims to equip faculty with a grasp of the methods and methodologies o
 
 
 ### Materials 
-* Laptop with qGIS 2.14 installed (see instructions [here](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/blob/master/Resources/DownloadingQGIS.md))
+* Laptop with QGIS 2.14 installed (see instructions [here](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/blob/master/Resources/DownloadingQGIS.md))
 * A three button mouse
 * All course tutorials will be provided and available via [Github](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/tree/master/Tutorials)
 * A three button mouse (this is highly *highly* recommended)
@@ -136,10 +136,7 @@ Studio@Butler
 **Monday, June 5 | Spatial Pedagogies**
 300 S Buell Hall
 
-* 1:00-3:30pm Spatial Pedagogies: a conversation with Laura Kurgan, Director CSR, Juan Francisco Saldarriaga, Associate Research Scholar, CSR and Leah Meisterlin, Assistant Professor of Urban Planning GSAPP
-	* Conflict Urbanism: Aleppo
-	* Mapping for Architecture Urbanism and the Humanities
-	* Datascapes and the Informal City
+* Curriculum Development Sessions by Appointment
 
 **Tuesday, June 6 | Syllabus Development & Practicum**
 Studio@Butler
