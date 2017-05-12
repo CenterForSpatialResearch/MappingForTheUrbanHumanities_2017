@@ -18,7 +18,7 @@ Mac users must install several packages which support QGIS: GDAL, NumPy, matplot
 1. Download this installer: [QGIS 2.14 for Mac](http://www.kyngchaos.com/files/software/qgis/QGIS-2.14.10-1.dmg)
 
 2. Once the download has completed, open the QGIS-2.8.4-1.dmg installer. You will see the following: 
- ![img](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Resources/Images/InstallMac01-a.png)
+ ![img](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/blob/master/Resources/Images/InstallMac01-a.png)
 
  You'll notice that the four installer packages included are numbered for the order in which you need to install them. 
 
