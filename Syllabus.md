@@ -11,13 +11,13 @@
 
 *Mapping for the Urban Humanities* is an intensive workshop on digital mapping designed for humanities faculty from Columbia University and offered through the Center for Spatial Research at the Columbia University Graduate School of Architecture, Planning, and Preservation with support from the Office of the Dean of Humanities.  
 
-This hands-on workshop is intended to broaden and transform the disciplinary locations within which data analysis takes place. The workshop will introduce participating faculty to open-source mapping software, QGIS, to methods of data collection and creation, and to approaches and concepts in critical spatial analysis. With support from the course’s three instructors, participants will incorporate newly-acquired spatial analysis skills into course assignments and syllabi. The ultimate aim of the summer intensive is to equip faculty with tools to transform their humanities courses into places where students learn data analytical skills and apply them to humanistic questions. 
+This hands-on workshop is intended to broaden and transform the disciplinary locations within which data analysis takes place. The workshop will introduce participating faculty to open-source mapping software, QGIS, to methods of data collection and creation, and to approaches and concepts in critical spatial analysis. With support from the course’s four instructors, participants will incorporate newly-acquired spatial analysis skills into course assignments and syllabi. The ultimate aim of the summer intensive is to equip faculty with tools to transform their humanities courses into places where students learn data analytical skills and apply them to humanistic questions. 
 
 The course condenses topics from a semester long introductory GIS course into a two-week hands-on intensive. Skills based tutorials draw on diverse datasets relevant to investigations in the urban humanities, including: CEISEN’s Gridded Population of the World, UN Population Division national population estimates, the National Historic Geographic Information System’s historic census records, historical rail lines from the University of Nebraska’s Digital History Project, Reference USA records for music industry businesses, American Community Survey demographic data, New York State Board of Education records of schools, and scanned historical maps from Columbia University’s map collection. Course tutorials and lectures have been developed concurrently and will expose faculty to critical approaches in GIS, introductory spatial analysis methods, and modes of data creation.
 
 
 ### Structure and Rhythm: 
-Over the course of the first two weeks (May 23-June 3), faculty will learn critical methods in digital mapping and data collection through the use of open-source software (QGIS). The course will meet for 4.5 hours each day in an intensive workshop and lab format. The third week (June 6 -10) will focus on bolstering skills development and on how to incorporate newly acquired skills into course assignments and syllabi, using the syllabi submitted with the application to the course as a starting point. During the third week participation is optional and will be scheduled in individual skill and syllabus workshop sessions. 
+Over the course of the first two weeks (May 22-June 2), faculty will learn critical methods in digital mapping and data collection through the use of open-source software (QGIS). The course will meet for 4.5 hours each day in an intensive workshop and lab format. The third week (June 5-9) will focus on bolstering skills development and on how to incorporate newly acquired skills into course assignments and syllabi, using the syllabi submitted with the application to the course as a starting point. During the third week participation is optional and will be scheduled in individual skill and syllabus workshop sessions. 
 
 ### Course Goals: 
 The course aims to equip faculty with a grasp of the methods and methodologies of Geographic Information Systems so that they can introduce critical spatial pedagogies into their teaching and research. Through the course faculty will:   
@@ -26,12 +26,16 @@ The course aims to equip faculty with a grasp of the methods and methodologies o
 * Create new spatial datasets using data creation methods integral to GIS
 * Identify and analyze key data sources in their field
 * Adapt course tutorials for use in their own classes 
-* Develop data-driven urban humanities courses and assignments 
+* Develop data-driven urban humanities courses and assignments
+* Define spatially-driven research questions
+* Gain basic fluency in methodology design
+
 
 ### Materials 
-* Laptop with qGIS 2.8 installed 
-* All course tutorials will be provided and available via [Github](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/tree/master/Tutorials)
+* Laptop with qGIS 2.14 installed 
 * A three button mouse
+* All course tutorials will be provided and available via [Github](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/tree/master/Tutorials)
+* A three button mouse (this is highly *highly* recommended)
 * Optional: a 16 GB flash drive to store course data + exercises
 
 ## Background on CSR 
@@ -42,12 +46,12 @@ Our projects generally involve collaborations with researchers and advocates acr
 ### To be updated for 2017
 
 ### Schedule and Topics
-**Monday, May 23 | Introduction**
+**Monday, May 22 | Introduction**
 Studio@Butler
 * **Topics:** Introductions, What is GIS?, Course overview: Mapping, Making, Analyzing
 * **Tutorial:** Mapping Data 00: Adding Layers to a Map
 
-**Tuesday, May 24 | Mapping Data 01**      	
+**Tuesday, May 23 | Mapping Data 01**      	
 Studio@Butler
 
 * **Topics:** GIS Data Types: Vector & Raster; Quantitative & Qualitative, Fundamentals of Cartography, Symbology, Classification			
@@ -56,7 +60,7 @@ Studio@Butler
 	* *CEISEN Gridded Population of the World*
 			
 
-**Wednesday, May 25 | Mapping Data 02**
+**Wednesday, May 24 | Mapping Data 02**
 Studio@Butler
 * **Topics:** Coordinate Reference Systems & Projection 							
 * **Tutorial:** Mapping Data 02: Map Projections & Population Density
@@ -64,7 +68,7 @@ Studio@Butler
 	* *U.S. Rail Lines 1850, 1870*
 
 
-**Thursday, May 26 | Making Data 01**
+**Thursday, May 25 | Making Data 01**
 300 S Buell Hall
 * **Topics:** Where GIS Data Comes From, Georeferencing, Digitizing 	
 						
@@ -73,7 +77,7 @@ Studio@Butler
 		* *East Bronx c. 1902: “Map or plan showing the system of streets, avenues, public squares and places, parks, bridges, etc. in that part of the borough of the Bronx, City of New York lying easterly of the Bronx River.”*
 
 
-**Friday, May 27 | Making Data 02**
+**Friday, May 26 | Making Data 02**
 300 S Buell Hall
 * **Topics:** Digitizing, Geocoding	
 						
@@ -85,16 +89,26 @@ Studio@Butler
 		* *Reference USA Database of Music Related Businesses c. 2015*
 				
 
-**Monday, May 30 | No Workshop, Memorial Day**
+**Monday, May 29 | No Workshop, Memorial Day**
 
 
-**Tuesday, May 31 | Analyzing Data 01**
+**Tuesday, May 30 | Making Public Work **
+Studio@Butler
+
+* **Due:** Deliverables from exercises from week one. Printed 8.5x11 in color.
+
+* **Topics**			Pinup and group discussion of week 1 work, Examples from the GeoHumanities, Webmaps
+
+* **Tutorial** 			Showing Data 01: Making Public Interactive Work with Webmaps
+*East Bronx c. 1902: “Map or plan showing the system of streets, avenues, public squares and places, parks, bridges, etc. in that part of the borough of the Bronx, City of New York lying easterly of the Bronx River.”*
+
+**Wednesday, May 31 | Analyzing Data 01**
 Studio@Butler
 
 * **Topics**			Introduction to Geoprocessing, 
 			Vector Geoprocessing Operations,
-Spatial Joins,	
-Working with Census Data
+Spatial Joins, Proportional Split Estimation,
+Working with Census Data, Modifiable Arial Unit Problem
 						
 * **Tutorial:**		Analyzing Data 01: Libraries, Education, and Language
 	* *NYC Branch Libraries*
@@ -102,42 +116,24 @@ Working with Census Data
 	* *NYC Board of Education Elementary School Locations*
 
 
-**Wednesday, June 1 | Analyzing Data 02**
-300 S Buell Hall
-
-* **Topics**			Creative Geoprocessing | Proportional Split Estimation,
-			Raster Operations,
-Raster Classification
-						
-* **Tutorials:**	
-	* Analyzing Data 01 (con’t): Libraries and Education 
-		* *NYC Branch Libraries*
-		* *American Community Survey Language Spoken by Census Tract*
-		* *NYC Board of Education Elementary School Locations*
-
-	* Analyzing Data 02: Mapping New York City’s Boundary(s) 
-		* *Land Use Land Cover Classifications*
-		* *Metropolitan Statistical Areas, Combined Statistical Areas, Urban Areas*
-
-
-**Thursday, June 2 | Analyzing Data 03**
+**Thursday, June 1 | Analyzing Data 02**
 Studio@Butler
 
-* **Topics**	Density Maps,
-			Raster-based Decision Mapping
+* **Topics**			
+			Geoprocessing with Rasters, Raster Classification, Density Maps
 						
-* **Tutorial:**Analyzing Data 03: Concentrations of Libraries and Education 
+* **Tutorials:** 	Analyzing Data 02: Concentrations of Libraries and Education 
 	* *NYC Branch Libraries*
 	* *NYC Board of Education Elementary School Locations*
 
 
-**Friday, June 3 | Bringing it all Together**
+**Friday, June 2 | Bringing it all Together**
 300 S Buell Hall
 
 * Designing Methodologies and Assignments 
 
 
-**Monday, June 6 | Spatial Pedagogies**
+**Monday, June 5 | Spatial Pedagogies**
 300 S Buell Hall
 
 * 1:00-3:30pm Spatial Pedagogies: a conversation with Laura Kurgan, Director CSR, Juan Francisco Saldarriaga, Associate Research Scholar, CSR and Leah Meisterlin, Assistant Professor of Urban Planning GSAPP
@@ -145,24 +141,24 @@ Studio@Butler
 	* Mapping for Architecture Urbanism and the Humanities
 	* Datascapes and the Informal City
 
-**Tuesday, June 7 | Syllabus Development & Practicum**
+**Tuesday, June 6 | Syllabus Development & Practicum**
 Studio@Butler
 	
 * Curriculum Development Sessions by Appointment
 
-**Wednesday, June 8 | Syllabus Development & Practicum**
+**Wednesday, June 7 | Syllabus Development & Practicum**
 Studio@Butler
 
 * Curriculum Development Sessions by Appointment
 
-**Thursday, June 9 | Syllabus Development & Practicum**
+**Thursday, June 8 | Syllabus Development & Practicum**
 Studio@Butler
 
 * Curriculum Development Sessions by Appointment
 
-**Friday, June 10 | Syllabus Development & Practicum**
+**Friday, June 9 | Syllabus Development & Practicum**
 300 S Buell Hall
 	
-* Debrief and discussion of course outcomes with Laura Kurgan, Director CSR, and Sharon Marcus, Dean of Humanities and Orlando Harriman Professor of English and Comparative Literature.
+* Debrief and discussion of course outcomes 
 
 
