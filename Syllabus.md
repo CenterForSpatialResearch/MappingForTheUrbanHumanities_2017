@@ -92,7 +92,7 @@ Studio@Butler
 **Monday, May 29 | No Workshop, Memorial Day**
 
 
-**Tuesday, May 30 | Making Public Work **
+**Tuesday, May 30 | Making Public Work**
 Studio@Butler
 
 * **Due:** Deliverables from exercises from week one. Printed 8.5x11 in color.
