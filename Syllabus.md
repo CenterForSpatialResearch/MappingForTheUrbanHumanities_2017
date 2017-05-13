@@ -43,12 +43,11 @@ The Center for Spatial Research was established in 2015 as a hub for urban resea
 
 Our projects generally involve collaborations with researchers and advocates across a variety of disciplines and institutions, working with them to communicate information clearly, critically, responsibly, and provocatively. We are committed to rigorous and reliable work with data; to harnessing the most powerful techniques of design and visualization; and to a critical reflection on the limits and ideologies of both data and its representation. Based in the disciplines of design, architecture and urbanism we make links with and bring spatial expertise to the humanities as well as the sciences.
 
-### To be updated for 2017
 
 ### Schedule and Topics
 **Monday, May 22 | Introduction**
 Studio@Butler
-* **Topics:** Introductions, What is GIS?, Course overview: Mapping, Making, Analyzing
+* **Topics:** Introductions, What is GIS?, Introduction to the Command Line
 * **Tutorial:** [Mapping Data 00](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/blob/master/Tutorials/01_MappingData00.md): Adding Layers to a Map
 
 **Tuesday, May 23 | Mapping Data 01**      	
@@ -94,9 +93,9 @@ Studio@Butler
 
 **Tuesday, May 30 | Making Public Work** 	Studio@Butler
 
-* **Due:** Deliverables from week one tutorials. Printed 8.5x11 in color.
+* **Due:** Deliverables from Week One tutorials. Printed 8.5x11 in color.
 
-* **Topics**			Pinup and group discussion of week 1 work, Examples from the GeoHumanities, Webmaps
+* **Topics**			Group discussion and Pin Up of week one work, Examples from the GeoHumanities, Webmaps
 
 * **Tutorial** 			Showing Data 01: Making Public Interactive Work with Webmaps
 *East Bronx c. 1902: “Map or plan showing the system of streets, avenues, public squares and places, parks, bridges, etc. in that part of the borough of the Bronx, City of New York lying easterly of the Bronx River.”*
