@@ -106,7 +106,7 @@ Studio@Butler
 * **Topics**			Introduction to Geoprocessing, 
 			Vector Geoprocessing Operations,
 Spatial Joins, Proportional Split Estimation,
-Working with Census Data, Modifiable Arial Unit Problem
+Working with Census Data, Modifiable Areal Unit Problem
 						
 * **Tutorial:**		[Analyzing Data 01](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/blob/master/Tutorials/08_AnalyzingData01.md): Libraries, Education, and Language
 	* *NYC Branch Libraries*
