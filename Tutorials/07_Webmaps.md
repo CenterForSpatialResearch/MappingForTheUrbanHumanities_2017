@@ -42,11 +42,25 @@ We have provided the basic folder structure that you will need to create your we
 
 In the broadest terms webdevelopment can be understood in the following way: HTML is the structure of a website, CSS is the style, and JavaScript is the functionality or the interaction. Each of these are contained in text files which we have organized into the above folder structure. When you are creating a webpage you are creating a series of linked textfiles that your browser reads. In addition there are folders for images: `img` and `data`. These two folders will contain any images you will use, and the data for the vector annotations as well as the georeferenced historical map. 
 
-[on preparing the historical map] watch
+#### Preparing your data
+For the purposes of this tutorial we have already prepared all of the data for you. However the following steps outline how you would go about exporting data from QGIS to include in an online map if you were starting from scratch. 
 
-[on preparing the geoJSON data] watch
+**Exporting and Formatting a Georeferenced Historical Map**
+1. *Set No Data Value.* Open the `Properties` menu for the georeference historical map. In the Transparency tab enter 0 in the `Additional no data value` field. Click **Apply**. You should notice that the black border around the outside of your image dissapears. 
+![instructions image](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/blob/master/Tutorials/Images/Webmaps/01_NoData.png)
+2. *Export Historical Map as a GeoTiff.* Right click on the georeferenced map in the layers panel and select Save as. Then in the save as dialogue box select `Rendered image` as the output mode. Select `GTiff` as the format. Name  your image and save it in the appropriate directory. (You must select `Rendered image` in order to export a version of your map without the black border)
+![instructions image](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/blob/master/Tutorials/Images/Webmaps/01_MapExport.png)
+3. *Reducing the File Size of the Map Image*. To make it more managable to load in the browser open the GeoTiff file we just created in the photo editor of your choice, adjust the image size to something more managable and then export as a **.png**. Save this file in the `data` folder of your webmap directory. 
 
-[going through the code, line by line]
+**Exporting Vector Layers as GeoJSON**
+Our webmap will rely on a different data format for our spatial data. Up until now we have been working with shapefiles. When we upload our annotations to the web we will be using a data format called GeoJSON. It is a different way to structure spatial and tabular information and it preserves all of the information we have come to expect from shapefiles. 
+
+1. *Export as GeoJSON*. Right click on the layer you want to export in the layers panel. Select Save as. Select `geoJSON` as the file format. Select `WGS 84` (a geographic coordinate reference system) as the CSR. Name  your file and save it in the appropriate directory.
+![instructions image](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/blob/master/Tutorials/Images/Webmaps/03_ExportGeoJSON.png)
+
+#### Building a webmap
+
+[going through the code, line by line]....
 
 
 
@@ -55,39 +69,88 @@ In the broadest terms webdevelopment can be understood in the following way: HTM
 <head>
 	<title>GeoreferencedWebmaps</title>
 
-	<link rel="stylesheet"  href="css/leaflet.css">
-	<script src="js/leaflet.js"></script>
+	<!-- <link rel="stylesheet"  href="css/leaflet.css"/> 
+	<script src="js/leaflet.js"></script>-->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+	<!-- 
+	<script src="js/jquery-2.1.1.min.js">  </script> -->
+
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
 
 	<style>
 	#map{ position:absolute; top:0; bottom:0;width: 100%;}
 	</style>
+
+	<script src='data/RoadLines.geojson'></script>
+
+
 </head>
 <body>
 	<div id="map"></div>
 
 	<script>
 	//initializing the map
-	var map = L.map('map').setView([40.88,-73.88], 12);
+	var map = L.map('map').setView([40.88,-73.88], 13);
 
-	//tile layers
-	L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+	//add background tile layers
+	L.tileLayer('http://tile.stamen.com/toner-lite/{z}/{x}/{y}.png',
 		{
-			attribution: 'Tiles from <a href="http://www.openstreetmap.org/">OSM</a>',
+			attribution: 'Tiles from <a href="http://www.openstreetmap.org/">OSM by Stamen Design</a>',
 		maxZoom: 19,
 		minZoom: 1
-		}).addTo(map)
+		}).addTo(map);
 
 	
-	var imageUrl = 'data/Bronx1902-modified copy-trans.png';
+	//link to the historical map image 
+	var imageUrl = 'data/BronxMap.png';
+
+	//define the area that image covers
 	var imageBounds = [[40.8846829955, -73.8978315922], [40.8290586719, -73.8201512858]]; 
 
-    	
+	//add georeferenced historical map
 	L.imageOverlay(imageUrl, imageBounds, {opacity: 0.8}).addTo(map);
 
-	L.tileLayer('http://maps.nypl.org/warper/maps/tile/27688/{z}/{x}/{y}.png').addTo(map)
+
+	//load GeoJSON file containing roads, and style lines
+  	$.getJSON('data/RoadLines.geojson',function(roadsData){
+	    L.geoJson(roadsData, {
+	    	color: "#ff7800",
+	    	weight: 3.5,
+	    	opacity: 0.65,
+	    	onEachFeature: road_annon
+	    }).addTo(map);
+	    });  
+
+  	//define popup content for road annotations
+  	var road_annon = function onEachFeature(feature, layer) {
+	    if (feature.properties && feature.properties.Descr) {
+	    	var roadsPopup = feature.properties.Descr;
+	        layer.bindPopup(roadsPopup);
+	    }
+	}
+
+	// load GeoJSON file containing points
+	$.getJSON('data/PointAnnotations.geojson',function(bldg){
+		L.geoJson(bldg,{
+			onEachFeature: point_annon
+	    }).addTo(map);
+	});
+
+	//define popup content for point annotations
+	var point_annon = function onEachFeature(feature, layer) {
+	    if (feature.properties && feature.properties.Descr) {
+	    	var pointsPopup = feature.properties.Name + '<br/> <img src="'+ feature.properties.ImgURL + '" width ="300px"/> <br/>' + feature.properties.Descr;
+	        layer.bindPopup(pointsPopup);
+	    }
+	}
+	
+	  
+	//add NYLP Map Warper maps
+	L.tileLayer('http://maps.nypl.org/warper/maps/tile/27688/{z}/{x}/{y}.png').addTo(map);
 
 
-</script>
+	</script>
 </body>
 </html>
 ```
