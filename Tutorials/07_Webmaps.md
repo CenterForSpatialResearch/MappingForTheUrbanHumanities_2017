@@ -60,8 +60,7 @@ Our webmap will rely on a different data format for our spatial data. Up until n
 
 #### Building a webmap
 
-[going through the code, line by line]....
-
+Here is the full code for the example listed above. 
 
 
 ```html
