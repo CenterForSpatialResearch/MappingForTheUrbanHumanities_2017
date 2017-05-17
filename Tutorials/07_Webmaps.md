@@ -39,8 +39,9 @@ We have provided the basic folder structure that you will need to create your we
 * index.html
 * `js`
 
+In the broadest terms webdevelopment can be understood in the following way: HTML is the structure of a website, CSS is the style, and JavaScript is the functionality or the interaction. Each of these are contained in text files which we have organized into the above folder structure. When you are creating a webpage you are creating a series of linked textfiles that your browser reads. 
 
-In the broadest terms webdevelopment can be understood in the following way: HTML is the structure of a website, CSS is the style, and JavaScript is the functionality or the interaction. Each of these are contained in text files which we have organized into the above folder structure. When you are creating a webpage you are creating a series of linked textfiles that your browser reads. In addition there are folders for images: `img` and `data`. These two folders will contain any images you will use, and the data for the vector annotations as well as the georeferenced historical map. 
+In addition there are folders for images: `img` and `data`. These two folders will contain any images you will use, and the data for the vector annotations as well as the georeferenced historical map. 
 
 #### Preparing your data
 For the purposes of this tutorial we have already prepared all of the data for you. However the following steps outline how you would go about exporting data from QGIS to include in an online map if you were starting from scratch. 
@@ -58,9 +59,102 @@ Our webmap will rely on a different data format for our spatial data. Up until n
 1. *Export as GeoJSON*. Right click on the layer you want to export in the layers panel. Select Save as. Select `geoJSON` as the file format. Select `WGS 84` (a geographic coordinate reference system) as the CSR. Name  your file and save it in the appropriate directory.
 ![instructions image](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/blob/master/Tutorials/Images/Webmaps/03_ExportGeoJSON.png)
 
-#### Building a webmap
+#### Building a Webmap
 
-Here is the full code for the example listed above. 
+Lets begin to make our webmap. 
+First you need to make sure you have Python installed. Check if you have Python installed and which version it is. We will be using Python to run a local server.
+
+### (Mac) Check which Python version you have (if any)
+
+1. Open a Terminal Window 
+2. Type `$ python -V` hit 'Return'
+4. Make a note of which Python version you have, you will need it later.
+
+### (Windows) Check which Python version you have (if any)
+1. open Command Prompt
+2. type python --version hit 'Return'
+	* if python is installed something like this will appear
+	![img](https://github.com/CenterForSpatialResearch/NYCDHWeek/blob/master/Images/pythontest.png)
+	* if it isn't then a message stating that will appear
+	* if Python is installed make note of which version you have installed, you will need it later
+3. if python is not installed then go to [python.org](python.org) to download python. We recommend installing version 2.7. 
+4. After downloading the installer, double-click to open it and follow the installation prompts, selecting the defaul settings until you get to the page that reads "Customize Python 2.7.XX" 
+	* Scroll to the bottom of options, and click the drop-down selection that reads "Add python.exe to Path" (it should have a red "X" by default)
+	* Select the option that reads "Entire feature will be installed on local hard drive"
+5. Follow the prompts on the rest of the setup, allow the installation to finish. When it's done, it will tell you, and python is now installed on your computer and available to use.
+6. To test that python was installed, open the Command Prompt application, and enter `python --version`. It should read `Python 2.12.XX`.
+
+### (Mac) Set up a local server
+
+We will run a local server from our computers. The details of this are far beyond this tutorial, for more on  the technical details, visit the [Mozilla Developer site](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Set_up_a_basic_working_environment). For more on how the web works the difference between a local and remote server, [read this](https://devdojo.com/blog/technology/local-vs-remote-servers).
+
+1. In a Terminal window, navigate to the folder where you have saved your html file (directions below on how to "navigate"). In my case it is in Documents > MappingForTheUrbanHumanities_2017 > Class_Data >3_Webmaps. To navigate there, I type the following commands (don't type the $, that just indicates that you are in the Terminal):
+
+	* `$ cd Documents`
+	* `$ cd MappingForTheUrbanHumanities_2017` 
+	* `$ cd Class_Data`
+	* `$ cd 3_Webmaps`
+	
+2. If you have Python 3, type:
+
+	* `$  python -m http.server`  
+	
+2. If you have Python 2, type:
+
+	* `$ python -m SimpleHTTPServer`
+	
+3. Return to your browser window (Chrome, Firefox, or Safari) and type `localhost` in the navigation bar. You should see an empty webpage. 
+
+### (Windows) Set up a local server
+1. Open Command Prompt. Then navigate to the folder where you have saved your html file (directions below on how to "navigate"). In my case it is in root > leaflet > leafletmap. To navigate there, I type the following commands:
+
+	* cd leaflet
+	* cd leafletmap
+
+2. If you have python 2 type:
+
+	* python -m SimpleHTTPServer
+
+3. If you have python 3 type: 
+
+	* python -m http.server
+
+	It will look something like this:
+	![img](https://github.com/CenterForSpatialResearch/NYCDHWeek/blob/master/Images/localhost.png)
+
+3. Return to your browser window (Chrome, Firefox, or Safari) and type `http:\\localhost` in the navigation bar. You should see an empty webpage.
+
+### Deconstructing The Webmap
+
+We will break down the example map provided in the `index.html` file line by line. The full code for the example is also provided at the end of this tutorial.
+
+1. *open* the index.html file in the text editor of your choice.
+
+#### Overall Structure
+
+HTML documents are constructed through using what are called tags that are denoted like this `<html> content </html>. All HTML documents follow a basic structure with a series of nested elements labeled with tags. 
+
+```html
+<html>
+<head>
+	//this is a comment
+	//all of your header information goes in the header, such as the leaflet library and the title of your webpage
+	<style>
+		//style tags are a way to embed simple CSS styles within your html document, that specify how certain elements on the page should look 
+</head>
+<body>
+	//all of the content of your webpage is contained within the body tags
+	//Think of tags as a set of parentheses that we must both open and then close. Closing tags look like this: </body>
+</body>
+</html>
+```
+
+
+As mentioned above we are using the Leaflet.js javascript library to create a webmap. Javascript is a language, like HTML and CSS, that all modern webbrowsers understand naturally. 
+
+
+Leaflet is a set of commands built with javascript that allow us to make webmaps relativley easily.  
+
 
 
 ```html
