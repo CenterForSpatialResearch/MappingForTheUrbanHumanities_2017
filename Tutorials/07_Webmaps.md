@@ -198,16 +198,29 @@ Please note: `//` in front of a line means that the code is "commented out" and 
 	*. Javascript (and therefore Leaflet) uses both dot notation and bracket notation, whenever there's a period between things in js, it's called dot notation, and you are "accessing the properties" of an "object" don't worry too much about this - it just means you are looking inside of that object to find a particular property.
 	4. '.setView([40.87,-73.87], 15)': We set the view of the map by specifying the center point in tatitude and longitude `[40.87,-73.87]`, as well as the zoom level: `15`.
 
-5. *Add background tile layers.*
+**Add Map Tiles**
+
+5. *Add background tile layers.* We are going to be using background tiles from [Open Street Map](http://wiki.openstreetmap.org/wiki/Tiles#cite_note-1) that have been styled by [Stamen Design](http://maps.stamen.com/#terrain/12/37.7706/-122.3782). There are a number of open source map tile providers out there and Stamen has some great versions. 
+
+1. *Call the tileLayer property* from Leaflet, and pass it the webaddress of the map tiles we are using. `L.tileLayer('http://tile.stamen.com/toner-lite/{z}/{x}/{y}.png'`
+	* We could try switching to a different tile provider `'https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png'`
+2. *Pass the tileLayer some properties.* 
+	1. Inside curly brackets after the address for the map tiles we will set the attribution (which is displayed in the bottom right corner). `attribution: 'Tiles from <a href="http://www.openstreetmap.org/">OSM style by Stamen Design</a>',`
+	2. We will also set the minimum and maximum zoom levels. `maxZoom: 19,
+		minZoom: 1`
+3. *Add the tileLayer to the map.* Pass the .addTo property, and give it the map variable. `.addTo(map);`
+
 ```javascript
 `L.tileLayer('http://tile.stamen.com/toner-lite/{z}/{x}/{y}.png',
 		{
-			attribution: 'Tiles from <a href="http://www.openstreetmap.org/">OSM by Stamen Design</a>',
+			attribution: 'Tiles from <a href="http://www.openstreetmap.org/">OSM style by Stamen Design</a>',
 		maxZoom: 19,
 		minZoom: 1
-		}).addTo(map);`
+		}).addTo(map);
 ```
-	
+4. *Save* your index.html document. Open your browser and refresh the `localhost:8000` page. You should see the following: 
+![img](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/blob/master/Tutorials/Images/Webmaps/04_MapTiles.png)
+
 
 
 ```html
