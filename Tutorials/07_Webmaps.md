@@ -138,55 +138,102 @@ HTML documents are constructed through using what are called tags that are denot
 <html>
 <head>
 	//this is a comment
-	//all of your header information goes in the header, such as the leaflet library and the title of your webpage
+	//all of your header information goes in the header, 
+	//such as the leaflet library and the title of your webpage
 	<style>
-		//style tags are a way to embed simple CSS styles within your html document, that specify how certain elements on the page should look 
+		//style tags are a way to embed simple CSS styles within your html document, 
+		//that specify how certain elements on the page should look
+	</style>
+
 </head>
+
 <body>
 	//all of the content of your webpage is contained within the body tags
-	//Think of tags as a set of parentheses that we must both open and then close. Closing tags look like this: </body>
+	//Think of tags as a set of parentheses that we must both open and then close. 
+	//Closing tags look like this: </body>
 </body>
 </html>
 ```
 
+#### Writing the Header
 
-As mentioned above we are using the Leaflet.js javascript library to create a webmap. Javascript is a language, like HTML and CSS, that all modern webbrowsers understand naturally. 
+As mentioned above we are using the Leaflet.js javascript library to create a webmap. Javascript is a language, like HTML and CSS, that all modern web browsers understand naturally. 
 
+Leaflet is a set of commands built with javascript that allow us to make webmaps relativley easily. 
 
-Leaflet is a set of commands built with javascript that allow us to make webmaps relativley easily.  
+We will also use another library called jQuery.js that will allow us to import the points and road outlines data. 
 
+It is helpful to think of these libraries as sets of commands that our program can draw on. 
+
+Because Leaflet and jQuery are both libraries we need to include them in our html document so that they can be referenced by our program when it runs in the browser. These libraries are really just also sets of text files, contained in javascript and css file types. 
+
+We include them in the header section: `<head>`
+
+1. *Download required libraries.* We have already done this step for you. But for reference we downloaded the Leaflet.js library from [here](http://leafletjs.com/download.html). And we downloaded the jQuery library from [here](http://jquery.com/download/).  
+2. *Name your map.* The `<title>` tag contains the name of your map that will appear at the top of the browser window.
+3. *Import Leaflet's CSS.* Leaflet comes with its own CSS styles that specify how certain elements, like the zoom buttons, should look. We have placed this css file in the `css` folder and now need to tell our index.html document where to find it.
+	`<link rel="stylesheet"  href="css/leaflet.css"/>`
+4. *Import Javascript libraries.* Now we need to import the Leaflet and jQuery javascript libraries. We have likewise saved these in the `js` folder in our webmaps directory. 
+	`<script src="js/leaflet.js"></script>`
+	`<script src="js/jquery-2.1.1.min.js">  </script>`
+5. *Set the size of your map.* Using CSS syntax we will set the size of the map to fill a full browser window: 
+	`<style> #map{position: absolute; top:0; bottom:0; left:0; width: 100%;} </style>`
+6. *Close the <header> tag.*
+
+#### Writing the Body
+
+Now we will move on to building the content of our map. 
+Please note: `//` in front of a line means that the code is "commented out" and will not be read by the browser. As we go along, uncomment the code section by section. 
+
+1. *Open the <body> section.* `<body>`
+2. *Make a section for the map.* Make a `<div>` for the map, and call it map.
+3. *Start a javascript command.* Write `<script>` to start writing in javascript within our index.html file.
+4. *Initialize the map* by creating a map variable. 
+`var map = L.map('map').setView([40.87,-73.87], 15);`
+	* Javascript requires that all variables be labeled with 'var'.
+	* We are going to create a map var and use leaflet to initialize it. We need to give out map two parameters. First, the latitude/longitude for the center of our map, and the zoom level. 
+	1. set `var map =`
+	2. When we call leaflet (i.e. access the leaflet library's set of commands), we use capital L  `L.map` to call Leaflet's map property.
+	*. Javascript (and therefore Leaflet) uses both dot notation and bracket notation, whenever there's a period between things in js, it's called dot notation, and you are "accessing the properties" of an "object" don't worry too much about this - it just means you are looking inside of that object to find a particular property.
+	4. '.setView([40.87,-73.87], 15)': We set the view of the map by specifying the center point in tatitude and longitude `[40.87,-73.87]`, as well as the zoom level: `15`.
+
+5. *Add background tile layers.*
+`L.tileLayer('http://tile.stamen.com/toner-lite/{z}/{x}/{y}.png',
+		{
+			attribution: 'Tiles from <a href="http://www.openstreetmap.org/">OSM by Stamen Design</a>',
+		maxZoom: 19,
+		minZoom: 1
+		}).addTo(map);`
+	
 
 
 ```html
+
 <html>
 <head>
 	<title>GeoreferencedWebmaps</title>
 
-	<!-- <link rel="stylesheet"  href="css/leaflet.css"/> 
-	<script src="js/leaflet.js"></script>-->
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
-	<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
-	<!-- 
-	<script src="js/jquery-2.1.1.min.js">  </script> -->
+	<link rel="stylesheet"  href="css/leaflet.css"/> 
 
-	<script src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+	<script src="js/leaflet.js"></script>
+
+	<script src="js/jquery-2.1.1.min.js">  </script>
 
 	<style>
-	#map{ position:absolute; top:0; bottom:0;width: 100%;}
+	#map{position:absolute; top:0; bottom:0; width: 100%;}
 	</style>
-
-	<script src='data/RoadLines.geojson'></script>
 
 
 </head>
 <body>
+	
 	<div id="map"></div>
 
 	<script>
-	//initializing the map
-	var map = L.map('map').setView([40.88,-73.88], 13);
+//initializing the map
+	var map = L.map('map').setView([40.87,-73.87], 15);
 
-	//add background tile layers
+//add background tile layers
 	L.tileLayer('http://tile.stamen.com/toner-lite/{z}/{x}/{y}.png',
 		{
 			attribution: 'Tiles from <a href="http://www.openstreetmap.org/">OSM by Stamen Design</a>',
@@ -195,17 +242,17 @@ Leaflet is a set of commands built with javascript that allow us to make webmaps
 		}).addTo(map);
 
 	
-	//link to the historical map image 
+//link to the historical map image 
 	var imageUrl = 'data/BronxMap.png';
 
-	//define the area that image covers
+//define the area that image covers
 	var imageBounds = [[40.8846829955, -73.8978315922], [40.8290586719, -73.8201512858]]; 
 
-	//add georeferenced historical map
+//add georeferenced historical map
 	L.imageOverlay(imageUrl, imageBounds, {opacity: 0.8}).addTo(map);
 
 
-	//load GeoJSON file containing roads, and style lines
+//load GeoJSON file containing roads, and style lines
   	$.getJSON('data/RoadLines.geojson',function(roadsData){
 	    L.geoJson(roadsData, {
 	    	color: "#ff7800",
@@ -215,22 +262,22 @@ Leaflet is a set of commands built with javascript that allow us to make webmaps
 	    }).addTo(map);
 	    });  
 
-  	//define popup content for road annotations
-  	var road_annon = function onEachFeature(feature, layer) {
+//define popup content for road annotations
+ 	var road_annon = function onEachFeature(feature, layer) {
 	    if (feature.properties && feature.properties.Descr) {
 	    	var roadsPopup = feature.properties.Descr;
 	        layer.bindPopup(roadsPopup);
 	    }
 	}
 
-	// load GeoJSON file containing points
+//load GeoJSON file containing points
 	$.getJSON('data/PointAnnotations.geojson',function(bldg){
 		L.geoJson(bldg,{
 			onEachFeature: point_annon
 	    }).addTo(map);
 	});
 
-	//define popup content for point annotations
+//define popup content for point annotations
 	var point_annon = function onEachFeature(feature, layer) {
 	    if (feature.properties && feature.properties.Descr) {
 	    	var pointsPopup = feature.properties.Name + '<br/> <img src="'+ feature.properties.ImgURL + '" width ="300px"/> <br/>' + feature.properties.Descr;
@@ -239,8 +286,11 @@ Leaflet is a set of commands built with javascript that allow us to make webmaps
 	}
 	
 	  
-	//add NYLP Map Warper maps
+//add NYLP Map Warper maps
 	L.tileLayer('http://maps.nypl.org/warper/maps/tile/27688/{z}/{x}/{y}.png').addTo(map);
+	
+//add NYLP Map Warper maps
+	L.tileLayer('http://maps.nypl.org/warper/maps/tile/17090/{z}/{x}/{y}.png').addTo(map);
 
 
 	</script>
