@@ -1,7 +1,7 @@
 
 ### Designing Assignments and Methods
 
-Over the course of Week Two you will work in your groups/pairs to take the research question(s) and datasets you identified in Week One and develop a "prototype" of your course assignment or research agenda. On Friday each group/pair will give a short presention about their "prototype" and the process of making it.
+Over the course of Week Two you will work in your groups/pairs to take the research question(s) and datasets you identified in Week One and develop a "prototype" of your course assignment or research agenda. On Friday each group/pair will give a short presentation about their "prototype" and the process of making it.
 
 The goal here is to apply some of the concepts and methods you have learned in the past two weeks to your group's topic. 
 
@@ -18,7 +18,7 @@ If you are designing an assignment your prototype might include:
 * data cleaned for your students
 * some draft maps that are examples of what you would like you students to produce
 
-If you are desinging a research project your prototype might include:
+If you are designing a research project your prototype might include:
 * an outline of a research methodology
 * some preliminary analytical or descriptive maps
 * a list of further data sets you need to find or produce
@@ -46,8 +46,8 @@ If you are designing a research project some questions you might choose address 
 
 #### Outline
 
-On *Tuesday, May 30*: Decide with your group a general direction for your "prototype."
-Between Tuesday and Wednesday research examples/predecents that can help guide your group's work on the prototype. 
+On *Tuesday, May 30*: Decide with your group on a general direction for the "prototype."
+Between Tuesday and Wednesday research examples/precedents that can help guide your group's work on the prototype. 
 
 On both *Wednesday* and *Thursday* you will have 1 hour to work with your group and the course instructors to develop your prototype. 
 
