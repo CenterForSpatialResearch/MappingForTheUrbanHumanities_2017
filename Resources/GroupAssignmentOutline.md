@@ -1,5 +1,5 @@
 
-###Designing Assignments and Methods
+### Designing Assignments and Methods
 
 Over the course of Week Two you will work in your groups/pairs to take the research question(s) and datasets you identified in Week One and develop a "prototype" of your course assignment or research agenda. On Friday each group/pair will give a short presention about their "prototype" and the process of making it.
 
