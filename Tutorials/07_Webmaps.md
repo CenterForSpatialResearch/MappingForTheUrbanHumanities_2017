@@ -175,6 +175,7 @@ We include them in the header section: `<head>`
 	`<link rel="stylesheet"  href="css/leaflet.css"/>`
 4. *Import Javascript libraries.* Now we need to import the Leaflet and jQuery javascript libraries. We have likewise saved these in the `js` folder in our webmaps directory. 
 	`<script src="js/leaflet.js"></script>`
+
 	`<script src="js/jquery-2.1.1.min.js">  </script>`
 5. *Set the size of your map.* Using CSS syntax we will set the size of the map to fill a full browser window: 
 	`<style> #map{position: absolute; top:0; bottom:0; left:0; width: 100%;} </style>`
@@ -198,12 +199,14 @@ Please note: `//` in front of a line means that the code is "commented out" and 
 	4. '.setView([40.87,-73.87], 15)': We set the view of the map by specifying the center point in tatitude and longitude `[40.87,-73.87]`, as well as the zoom level: `15`.
 
 5. *Add background tile layers.*
+```javascript
 `L.tileLayer('http://tile.stamen.com/toner-lite/{z}/{x}/{y}.png',
 		{
 			attribution: 'Tiles from <a href="http://www.openstreetmap.org/">OSM by Stamen Design</a>',
 		maxZoom: 19,
 		minZoom: 1
 		}).addTo(map);`
+```
 	
 
 
