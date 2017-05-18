@@ -150,8 +150,10 @@ In the bottom left hand corner of your QGIS window you will see that five popula
 ![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/20_SelectedFeatures.png)
 
 #### On Your Own
-Now on your own use select by attributes and select by location to answer the following questions: 
-* How many countries contain cities with greater than 7 million inhabitants?  
+Now on your own use select by attributes and select by location to answer the following question: 
+* How many countries contain cities with greater than 7 million inhabitants?
+
+Include the answer as part of your map composition that we will review on Tuesday.   
 
 #### Symbolizing World Populations
 
@@ -174,16 +176,6 @@ The outcome of your selections should look something like this:
 
 ![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/22_Graduated2.png)
 
-**Choropleth**
-
-We will create a choropleth map for population by country, where each country will be colored according to its population size. 
-
-**Open** the properties for the admin_0_countriesUNPop layer and navigate to the Style tab. Select Graduated Symbols from the dropdown at the top left, and select Pop_2010 as the Column on which we will color the map. Then in order to change the color of the entire country polygon we will need to change the symbol from an outline to a filled polygon by clicking the Change button next to Symbol and selecting “simple fill.” Next we will break up our data into classes, or ranges of values, and classify the colors for our choropleth map according to these. 
-
-Change the mode to Natural Breaks (jenks), and the number of classes to 8. Then **Click** `Classify`. Your properties menu will now look like the one below. Click `Apply`. The country polygons will change on the map. 
-
-![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/22_Choropleth.png)
-
 **Raster Classified Color Ramp**
 
 Next we will symbolize our gridded population of the world layer. This layer is different from the ones we have been primarily working with thus far because it is a raster dataset. 
@@ -201,6 +193,21 @@ And it is symbolizing based on the minimum value, in this case '0' and on the ma
 Now change the `Render type` to `Singleband pseudocolor` to get something similar to a symbology we would do for a vector file. On the right-hand panel you will see the `Mode of classification` (`Continuous` or `Equal Interval`) and below, again, the Load min/max values panel. Click on the `Classify` button to load the values and then hit `Apply` to see it on the map. Now you can see clearly the regions of the world with the highest population density. You can experiment with the style of your map by changing the colors used with the pulldown menu highlighted in blue.
 
 ![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/24_Pseudo.png)
+
+
+#### On your Own
+**Choropleth**
+
+Create a choropleth map for population by country, where each country is  colored according to its population size. 
+
+**Open** the properties for the admin_0_countriesUNPop layer and navigate to the Style tab. Select Graduated Symbols from the dropdown at the top left, and select Pop_2010 as the Column on which we will color the map. Then in order to change the color of the entire country polygon we will need to change the symbol from an outline to a filled polygon by clicking the Change button next to Symbol and selecting “simple fill.” Next we will break up our data into classes, or ranges of values, and classify the colors for our choropleth map according to these. 
+
+Experiment with different modes and numbers of classes. What argument does each option convey? 
+
+After selecting each combination **Click** `Classify`.  Click `Apply`. The country polygons will change on the map. 
+
+![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/22_Choropleth.png)
+
 
 #### Designing a map
 In order to present these three types of population measures we will now compose a map layout and become familiar with the QGIS map composer. The map composer allows you to add a legend, north arrow and scale bar to the map as well as to export our work as a PDF. 
@@ -237,7 +244,16 @@ Finally use one of the export options circled in blue above to save the map comp
 
 ![Attribute](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/Mapping_WorldPopulation.png)
 
+### Deliverables: 
+**due Tuesday, May 30, 2017**
+For Tuesday, print out your finished map composition (in color, on 8.5 x 11 paper)
+
+Include your answer to the following question you answered on your own:
+* How many countries contain cities with greater than 7 million inhabitants?
+
+
+
 ______________________________________________________________________________________________________________
 
-Tutorial written by Dare Brawley, for *Mapping for the Urban Humanities*, a intensive workshop for Columbia University faculty taught in Summer 2016 by the [Center for Spatial Research](http://c4sr.columbia.edu). More information about the course is available [here](http://c4sr.columbia.edu/courses/mapping-urban-humanities-summer-bootcamp).
+Tutorial written by Dare Brawley, for *Mapping for the Urban Humanities*, a intensive workshop for Columbia University faculty taught in Summer 2017 by the [Center for Spatial Research](http://c4sr.columbia.edu). More information about the course is available [here](http://c4sr.columbia.edu/courses/mapping-urban-humanities-summer-bootcamp).
 
