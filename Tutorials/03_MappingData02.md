@@ -22,17 +22,15 @@ We will go through the steps for searching for and downloading historical census
 
 **Navigate** to [https://nhgis.org](https://nhgis.org) using your browser of choice. In the menu on the left choose `Select Data.`
 
-![add](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData02/01_NHGIS.png)
+![add](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/tree/master/Tutorials/Images/MappingData02/01_NHGIS.png)
 
 Then use the filters which appear to search for the data you are interested in. First we will filter their archive by geographic level, and will select counties. 
-
-![add](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData02/02_NHGISFilters.png)
 
 Select `Geographic Level` from the filter options. 
 
 A menu will open containing all of the available geographies. Click on `County (by State)`, this will open an information menu which outlines which datasets are available at this level of geography. We can scan this to confirm that the 1850 Agricultural Census is available at the county level. 
 
-![add](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData02/03_NHGIS_Geography.png)
+![add](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/tree/master/Tutorials/Images/MappingData02/03_NHGIS_Geography.png)
 
 Once we have confirmed that the information we are interested in is available at the desired geography click the plus icon next to `County (by State)` to add it to our selected geographic level filters. Select Submit. The geographic level filters menu will close and all of the source tables available at the county level will appear. 
 
@@ -40,7 +38,7 @@ Next repeat this process to filter the results to display only the tables availa
 
 Our results will now be narrowed to look like the image below. We have found the Total Population from 1850. You can select the source table name in order to view more information about it. 
 
-![add](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData02/04_NHGIS_SourceTable.png)
+![add](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/tree/master/Tutorials/Images/MappingData02/04_NHGIS_SourceTable.png)
 
 **Select** the plus icon at the left of the Total Population table name to add this dataset to our selections. You’ll notice the `Data Cart` in the upper right hand of the screen reflect this.
 
@@ -58,43 +56,26 @@ This list will display all of your recent extracts and the status of each downlo
 
 When the data is ready for download its status will be listed as complete and you can click on tables and gis in order to download the shapefile and attribute tables. 
 
-![add](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData02/05_NHGIS_Download.png)
-
 Your next step will be to join the table of population data to the county boundary shapefile. We will go through this together below. 
 
 #### Preparing your data
-**Performing a Table Join**
-
-The 1850 and 1870 population data that we will be working with is in tabular form and thus we will then need to join his data to county boundary polygons in order to analyze and represent it spatially. We have already performed one table join in the previous exercise, so this will be review. We will only do this for 1850, we have provided you with a shapefile of counties in 1870 with population data already joined to them. 
-
-First, **open** Microsoft Excel and then navigate to Course_Data/MappingData/Tabular and open `nhgis_1850_Population_county.csv`. In addition open and its associated codebook `nhgis_1850_Population_county_codebook.txt` with the text editor of your choice. NHGIS uses some abbreviated naming conventions for its columns which are not entirely intuitive, however the codebook which is always automatically downloaded with their data clarifies the meanings of these column names. 
-
-In the 1850 population CSV file you’ll see 8 columns: GISJOIN, YEAR, STATE, STATEA, COUNTY, COUNTYA, AREANAME	, ADQ001. 
-
-If we look in the codebook we’ll notice that ADQ001 is the field that contains total population value for each county. Lets rename ADQ001 something more intuitive: POP_1850. 
-
-Recall from the previous exercise, that in order to add a table to QGIS it must be saved as an .xls file (note for future reference there are other tabular file formats that QGIS can read however xls files are the easiest way to make sure that QGIS understands the datatype contained in each column of your data). 
-
-**Save** the nhgis_1850_Population_county.csv file as a .xls. **Select** `File`>`Save As`. Then select `Excel 1997-2004 Workbook (xls)` as the File format and save the file as `nhgis_1850_Population_cty.xls` in the MappingData\Tabular folder. 
-
-![add](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData02/06_xls.png)
-
-Now we can join the 1850 population data to the county polygons for 1850 and begin to ask some questions about population along train lines in 1850 and 1870. 
 
 **Launch** QGIS. 
 
 First add the other vector data layers we will be working with using the `add vector layer` button and then navigating to Course_Data/MappingData/Shape and adding: 
 
-* USCounty_1870_Albers_PopJoin-1.shp 
-* USCounty_1850_Albers.shp
 * RR1850_Albers.shp
 * RR1870_Albers.shp files
+* USCounty_1850_Albers.shp
+* USCounty_1870_Albers_PopJoin-1.shp 
 
-Then add the table of population values using the `add vector layer`button:
-* nhgis_1850_Population_cty.xls
+Then add the table of population values using the `add delimited layer`button:
 
+* nhgis_1850_Population_county.csv
 
-**Save** your QGIS project as MappingData_02_Population in the MappingForTheUrbanHumanities\Tutorials folder.
+**Save** your QGIS project as MappingData_02_Population in the MappingForTheUrbanHumanities_2017\Tutorials folder.
+
+**Performing a Table Join**
 
 We will now repeat the steps we took in the previous exercise to join the 1850 population data to the 1850 counties shapefile. 
 

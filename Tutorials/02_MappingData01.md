@@ -31,11 +31,19 @@ It should still contain the countries polygons and populated places points we ad
 
 Then in the dialog box which opens browse to the MappingData\Raster folder and select gpw_v4_2010.tif. We will speak about the qualities of raster datasets a bit more later but for now let’s just add it to the map. After you’ve added this layer you can **un-click** the box next to the layer name in int Layers menu in order to toggle the visibility of the layer off. 
 
-Now we will add the table that describes population by country which we will join to the country polygons in order to be able to examine country level population values spatially. QGIS can read several types of tabular data formats, including .csv and .xls files. Our total population file is saved an .xls file (note QGIS cannot generally read .xlsx files saved in the newest version of microsoft excel). We will again use the `Add vector layer` button to add our TotalPopulation_Countries.xls file. (Note: we realize it is a little bit confusing that we use the `Add vector layer` button in order to add tabular data to our map project however this is somewhat a product of the fact that QGIS is open source -- later we will go over how to .csv files which will, more intuitively, be added using the `Add delimited data` button).
+Now we will add the table that describes population by country which we will join to the country polygons in order to be able to examine country level population values spatially. 
 
-![CSV](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/02_Adding_Layers_Vector.png)
+**Select** the `add delimited layer` button. 
 
-Then in the dialog box which opens browse to the MappingData\Tabular folder and **select** TotalPopulation_Countries.xls. You'll notice TotalPopulation_Countries has been added to the Layers menu. Because it is just a table and does not have any geometry it does not show up in our map view. Lets open up its attribute table to see the fields that it contains before we embark on joining it to our country polygons. It contains three columns (or fields): `Country_Code`, `Name`, and `Pop_2010`. 
+![CSV](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/09_Adding_Layers_Delimited.png)
+
+Then in the dialog box which opens browse to the MappingData\Tabular folder and **select** TotalPopulation_Countries.csv. 
+**Select** `CSV` as the File Format. And **select** `no geometry (attribute table only)` as the Geometry Definition. **Click** OK. 
+
+![CSV](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/blob/master/Tutorials/Images/MappingData01/08_AddCSV.png)
+
+
+You'll notice TotalPopulation_Countries has been added to the Layers menu. Because it is just a table and does not have any geometry it does not show up in our map view. Lets open up its attribute table to see the fields that it contains before we embark on joining it to our country polygons. It contains three columns (or fields): `Country_Code`, `Name`, and `Pop_2010`. 
 
 ![CSV](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities/blob/master/Tutorials/Images/MappingData01/09_Attributexls.png)
 
