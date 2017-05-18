@@ -244,9 +244,48 @@ Now we will add the road outlines that we digitized.
 5. *Add the lines to the map*
 6. *Save and then refresh your browser,* the road lines should be visible.
 
+```javascript
+$.getJSON('data/RoadLines.geojson',function(roadsData){
+	    L.geoJson(roadsData, {
+	    	color: "#ff7800",
+	    	weight: 3.5,
+	    	opacity: 0.65,
+	    	//onEachFeature: road_annon
+	    }).addTo(map);
+	    }); 
+```
 **Add Interactivity to Road Outlines (or any geojson file)**
+We will now add popups for each of our road lines. 
+
+1. *Create a variable* lets call it `road_annon`
+2. *Call the leaflet function* `onEachFeature`. This must be defined for two parameters:  `feature` and `layer`. What ever information we include in this function will be called once for each feature (basically each row) in our GeoJSON file. 
+3. *Define the action* we want called for each feature: 
+	* If the RoadLines.geojson file has properties (attribute information) and has a column named `Descr` 
+	* Then create a variable called `roadsPopup`. 
+	* Inside that variable store the value of the `Descr` column in the RoadLines.geojson file. 
+	* Use the `.bindPopup()` leaflet method to attach the content of the roadsPopup to each element in the RoadsData layer
+4. *Call the onEachFeature function we just defined.* Return to the block of code above where we added the data and uncomment `onEachFeature: road_annon`
 
 ```javascript
+//load GeoJSON file containing roads, and style lines
+  	$.getJSON('data/RoadLines.geojson',function(roadsData){
+	    L.geoJson(roadsData, {
+	    	color: "#ff7800",
+	    	weight: 3.5,
+	    	opacity: 0.65,
+	    	onEachFeature: road_annon
+	    }).addTo(map);
+	    });  
+
+//define popup content for road annotations
+ 	var road_annon = function onEachFeature(feature, layer) {
+	    if (feature.properties && feature.properties.Descr) {
+	    	var roadsPopup = feature.properties.Descr;
+	        layer.bindPopup(roadsPopup);
+	    }
+	}
+```
+
 
 ```html
 
