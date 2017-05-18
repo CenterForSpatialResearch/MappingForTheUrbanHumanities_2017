@@ -47,11 +47,13 @@ In addition there are folders for images: `img` and `data`. These two folders wi
 For the purposes of this tutorial we have already prepared all of the data for you. However the following steps outline how you would go about exporting data from QGIS to include in an online map if you were starting from scratch. 
 
 **Exporting and Formatting a Georeferenced Historical Map**
-1. *Set No Data Value.* Open the `Properties` menu for the georeference historical map. In the Transparency tab enter 0 in the `Additional no data value` field. Click **Apply**. You should notice that the black border around the outside of your image dissapears. 
+1. *Find the latitude and longitude* coordinates of your image. We will need these later on when we import the historical map into our web map. Enable the `Lat Lon Tools` plugin in QGIS. Then use it to select the top left and bottom right corners of your raster and copy these to your notes. One thing that is important to note, you must choose the corners of your raster dataset (i.e. the corners of the black rectangle around your rotated map).
+![img](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/blob/master/Tutorials/Images/Webmaps/05_LatLonTools.png).
+2. *Set No Data Value.* Open the `Properties` menu for the georeference historical map. In the Transparency tab enter 0 in the `Additional no data value` field. Click **Apply**. You should notice that the black border around the outside of your image dissapears. 
 ![instructions image](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/blob/master/Tutorials/Images/Webmaps/01_NoData.png)
-2. *Export Historical Map as a GeoTiff.* Right click on the georeferenced map in the layers panel and select Save as. Then in the save as dialogue box select `Rendered image` as the output mode. Select `GTiff` as the format. Name  your image and save it in the appropriate directory. (You must select `Rendered image` in order to export a version of your map without the black border)
+3. *Export Historical Map as a GeoTiff.* Right click on the georeferenced map in the layers panel and select Save as. Then in the save as dialogue box select `Rendered image` as the output mode. Select `GTiff` as the format. Name  your image and save it in the appropriate directory. (You must select `Rendered image` in order to export a version of your map without the black border)
 ![instructions image](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/blob/master/Tutorials/Images/Webmaps/01_MapExport.png)
-3. *Reducing the File Size of the Map Image*. To make it more managable to load in the browser open the GeoTiff file we just created in the photo editor of your choice, adjust the image size to something more managable and then export as a **.png**. Save this file in the `data` folder of your webmap directory. 
+4. *Reducing the File Size of the Map Image*. To make it more managable to load in the browser open the GeoTiff file we just created in the photo editor of your choice, adjust the image size to something more managable and then export as a **.png**. Save this file in the `data` folder of your webmap directory. 
 
 **Exporting Vector Layers as GeoJSON**
 Our webmap will rely on a different data format for our spatial data. Up until now we have been working with shapefiles. When we upload our annotations to the web we will be using a data format called GeoJSON. It is a different way to structure spatial and tabular information and it preserves all of the information we have come to expect from shapefiles. 
@@ -221,7 +223,30 @@ Please note: `//` in front of a line means that the code is "commented out" and 
 4. *Save* your index.html document. Open your browser and refresh the `localhost:8000` page. You should see the following: 
 ![img](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/blob/master/Tutorials/Images/Webmaps/04_MapTiles.png)
 
+**Add GeoreferencedHistorical Map**
+We will now embed the "Map or plan of that part of the Borough of the Bronx, City of New York, lying easterly of the Bronx River" published in 1902 that we georeferenced in the previous exercise. 
 
+1. *Create a variable* that contains the url of the image, in this case the path to where is it stored in the directory for our webmap. 
+`var imageUrl = 'data/BronxMap.png';`
+2. *Create another variable* where you define the area that the image covers using two pairs of latitute and longitude coordinates for the top left and bottom right corners of your image. We found these coordinates using the `lat lon tools` plugin for QGIS when we were preparing the historical map raster earlier. 
+`var imageBounds = [[40.8846829955, -73.8978315922], [40.8290586719, -73.8201512858]];`
+3. *Call Leaflet's .imageOverlay()* method pass it the two variable we just created, set the opacity of the map layer and add it to the map. 
+`L.imageOverlay(imageUrl, imageBounds, {opacity: 0.8}).addTo(map);`
+4. *Save and then refresh your browser* and the 1902 map should appear. 
+
+**Add Digitized Road Outlines (or any geojson file)**
+Now we will add the road outlines that we digitized. 
+
+1. *Use the jQuery command, getJSON.* Use $ to call the jQuery library, just like Leaflet is **called** with L., jQuery is **called** with $.
+2. *Tell jQuery where your file is located,* and give the function a name (I'm going to use 'roadsData'). 
+3. *Set the color,* line weight, and opacity of your lines. 
+4. *Comment out* `//onEachFeature: road_annon` we will use this in the next step.
+5. *Add the lines to the map*
+6. *Save and then refresh your browser,* the road lines should be visible.
+
+**Add Interactivity to Road Outlines (or any geojson file)**
+
+```javascript
 
 ```html
 
