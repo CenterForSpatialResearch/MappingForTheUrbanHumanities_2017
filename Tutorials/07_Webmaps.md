@@ -11,13 +11,13 @@ With this exercise you will learn how to create a basic web-based map using the 
 
 #### The Premise
 
-With this exercise our goal is to create a simple interactive online map that shows the New York Botanical Garden just after it was initially constructed and annotates several imporant buildings and roads at the NYBG. We will use the 1902 Bronx map (that we georeferenced in the previous exercise) as well as some of the features we digitized adding additional annotations. 
+With this exercise our goal is to create a simple interactive online map that shows the New York Botanical Garden just after it was initially constructed and annotates several important buildings and roads at the NYBG. We will use the 1902 Bronx map (that we georeferenced in the previous exercise) as well as some of the features we digitized adding additional annotations. 
 
 For context lets take a look at what this final map will look like: 
 
 ******link to map + screenshot*******
 
-To accomplish this we will be using Leaflet.js, an incredibly well documented javascript library with many online easily accessible examples to learn from. Review the [Docs](http://leafletjs.com/reference-1.0.3.html) page for explinations of all of the functions in the leaflet library. 
+To accomplish this we will be using Leaflet.js, an incredibly well documented javascript library with many online easily accessible examples to learn from. Review the [Docs](http://leafletjs.com/reference-1.0.3.html) page for explanations of all of the functions in the leaflet library. 
 
 Leaflet.js is one of many many ways to create webmaps. Others include: 
 * OpenLayers
@@ -39,7 +39,7 @@ We have provided the basic folder structure that you will need to create your we
 * index.html
 * `js`
 
-In the broadest terms webdevelopment can be understood in the following way: HTML is the structure of a website, CSS is the style, and JavaScript is the functionality or the interaction. Each of these are contained in text files which we have organized into the above folder structure. When you are creating a webpage you are creating a series of linked textfiles that your browser reads. 
+In the broadest terms web development can be understood in the following way: HTML is the structure of a website, CSS is the style, and JavaScript is the functionality or the interaction. Each of these are contained in text files which we have organized into the above folder structure. When you are creating a webpage you are creating a series of linked text files that your browser reads. 
 
 In addition there are folders for images: `img` and `data`. These two folders will contain any images you will use, and the data for the vector annotations as well as the georeferenced historical map. 
 
@@ -49,11 +49,11 @@ For the purposes of this tutorial we have already prepared all of the data for y
 **Exporting and Formatting a Georeferenced Historical Map**
 1. *Find the latitude and longitude* coordinates of your image. We will need these later on when we import the historical map into our web map. Enable the `Lat Lon Tools` plugin in QGIS. Then use it to select the top left and bottom right corners of your raster and copy these to your notes. One thing that is important to note, you must choose the corners of your raster dataset (i.e. the corners of the black rectangle around your rotated map).
 ![img](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/blob/master/Tutorials/Images/Webmaps/05_LatLonTools.png).
-2. *Set No Data Value.* Open the `Properties` menu for the georeference historical map. In the Transparency tab enter 0 in the `Additional no data value` field. Click **Apply**. You should notice that the black border around the outside of your image dissapears. 
+2. *Set No Data Value.* Open the `Properties ` menu for the georeferenced historical map. In the Transparency tab enter 0 in the `Additional no data value` field. Click **Apply**. You should notice that the black border around the outside of your image disappears. 
 ![instructions image](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/blob/master/Tutorials/Images/Webmaps/01_NoData.png)
-3. *Export Historical Map as a GeoTiff.* Right click on the georeferenced map in the layers panel and select Save as. Then in the save as dialogue box select `Rendered image` as the output mode. Select `GTiff` as the format. Name  your image and save it in the appropriate directory. (You must select `Rendered image` in order to export a version of your map without the black border)
+3. *Export Historical Map as a GeoTiff.* Right click on the georeferenced map in the layers panel and select Save as. Then in the save as dialog box select `Rendered image` as the output mode. Select `GTiff` as the format. Name  your image and save it in the appropriate directory. (You must select `Rendered image` in order to export a version of your map without the black border)
 ![instructions image](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/blob/master/Tutorials/Images/Webmaps/01_MapExport.png)
-4. *Reducing the File Size of the Map Image*. To make it more managable to load in the browser open the GeoTiff file we just created in the photo editor of your choice, adjust the image size to something more managable and then export as a **.png**. Save this file in the `data` folder of your webmap directory. 
+4. *Reducing the File Size of the Map Image*. To make it more manageable to load in the browser open the GeoTiff file we just created in the photo editor of your choice, adjust the image size to something more manageable and then export as a **.png**. Save this file in the `data` folder of your webmap directory. 
 
 **Exporting Vector Layers as GeoJSON**
 Our webmap will rely on a different data format for our spatial data. Up until now we have been working with shapefiles. When we upload our annotations to the web we will be using a data format called GeoJSON. It is a different way to structure spatial and tabular information and it preserves all of the information we have come to expect from shapefiles. 
@@ -80,7 +80,7 @@ First you need to make sure you have Python installed. Check if you have Python 
 	* if it isn't then a message stating that will appear
 	* if Python is installed make note of which version you have installed, you will need it later
 3. if python is not installed then go to [python.org](python.org) to download python. We recommend installing version 2.7. 
-4. After downloading the installer, double-click to open it and follow the installation prompts, selecting the defaul settings until you get to the page that reads "Customize Python 2.7.XX" 
+4. After downloading the installer, double-click to open it and follow the installation prompts, selecting the default settings until you get to the page that reads "Customize Python 2.7.XX" 
 	* Scroll to the bottom of options, and click the drop-down selection that reads "Add python.exe to Path" (it should have a red "X" by default)
 	* Select the option that reads "Entire feature will be installed on local hard drive"
 5. Follow the prompts on the rest of the setup, allow the installation to finish. When it's done, it will tell you, and python is now installed on your computer and available to use.
@@ -108,10 +108,12 @@ We will run a local server from our computers. The details of this are far beyon
 3. Return to your browser window (Chrome, Firefox, or Safari) and type `localhost` in the navigation bar. You should see an empty webpage. 
 
 ### (Windows) Set up a local server
-1. Open Command Prompt. Then navigate to the folder where you have saved your html file (directions below on how to "navigate"). In my case it is in root > leaflet > leafletmap. To navigate there, I type the following commands:
+1. Open Command Prompt. Then navigate to the folder where you have saved your html file (directions below on how to "navigate"). In my case it is in Documents > MappingForTheUrbanHumanities_2017 > Class_Data >3_Webmaps. To navigate there, I type the following commands:
 
-	* cd leaflet
-	* cd leafletmap
+	* cd Documents
+	* cd MappingForTheUrbanHumanities_2017
+	* cd Class_Data
+	* cd 3_Webmaps
 
 2. If you have python 2 type:
 
@@ -198,7 +200,7 @@ Please note: `//` in front of a line means that the code is "commented out" and 
 	1. set `var map =`
 	2. When we call leaflet (i.e. access the leaflet library's set of commands), we use capital L  `L.map` to call Leaflet's map property.
 	*. Javascript (and therefore Leaflet) uses both dot notation and bracket notation, whenever there's a period between things in js, it's called dot notation, and you are "accessing the properties" of an "object" don't worry too much about this - it just means you are looking inside of that object to find a particular property.
-	4. '.setView([40.87,-73.87], 15)': We set the view of the map by specifying the center point in tatitude and longitude `[40.87,-73.87]`, as well as the zoom level: `15`.
+	4. '.setView([40.87,-73.87], 15)': We set the view of the map by specifying the center point in latitude and longitude `[40.87,-73.87]`, as well as the zoom level: `15`.
 
 **Add Map Tiles**
 
@@ -228,7 +230,7 @@ We will now embed the "Map or plan of that part of the Borough of the Bronx, Cit
 
 1. *Create a variable* that contains the url of the image, in this case the path to where is it stored in the directory for our webmap. 
 `var imageUrl = 'data/BronxMap.png';`
-2. *Create another variable* where you define the area that the image covers using two pairs of latitute and longitude coordinates for the top left and bottom right corners of your image. We found these coordinates using the `lat lon tools` plugin for QGIS when we were preparing the historical map raster earlier. 
+2. *Create another variable* where you define the area that the image covers using two pairs of latitude and longitude coordinates for the top left and bottom right corners of your image. We found these coordinates using the `lat lon tools` plugin for QGIS when we were preparing the historical map raster earlier. 
 `var imageBounds = [[40.8846829955, -73.8978315922], [40.8290586719, -73.8201512858]];`
 3. *Call Leaflet's .imageOverlay()* method pass it the two variable we just created, set the opacity of the map layer and add it to the map. 
 `L.imageOverlay(imageUrl, imageBounds, {opacity: 0.8}).addTo(map);`
@@ -258,13 +260,15 @@ $.getJSON('data/RoadLines.geojson',function(roadsData){
 We will now add popups for each of our road lines. 
 
 1. *Create a variable* lets call it `road_annon`
-2. *Call the leaflet function* `onEachFeature`. This must be defined for two parameters:  `feature` and `layer`. What ever information we include in this function will be called once for each feature (basically each row) in our GeoJSON file. 
+2. *Call the leaflet function* `onEachFeature`. This must be defined for two parameters:  `feature` and `layer`. Whatever information we include in this function will be called once for each feature (basically each row) in our GeoJSON file. 
 3. *Define the action* we want called for each feature: 
 	* If the RoadLines.geojson file has properties (attribute information) and has a column named `Descr` 
 	* Then create a variable called `roadsPopup`. 
 	* Inside that variable store the value of the `Descr` column in the RoadLines.geojson file. 
 	* Use the `.bindPopup()` leaflet method to attach the content of the roadsPopup to each element in the RoadsData layer
 4. *Call the onEachFeature function we just defined.* Return to the block of code above where we added the data and uncomment `onEachFeature: road_annon`
+
+Your code should now look like the following.
 
 ```javascript
 //load GeoJSON file containing roads, and style lines
@@ -285,9 +289,59 @@ We will now add popups for each of our road lines.
 	    }
 	}
 ```
+**Add GeoJSON file containing Points**
+We will now add the GeoJSON file that contains the points we want to highlight with annotations on our map. 
 
+This follows largely the same process as above.
+
+The main difference here is that we have added some extra formatting to the popup windows for the points. 
+
+1. *Use the jQuery command, getJSON.* Use $ to call the jQuery library, just like Leaflet is **called** with L., jQuery is **called** with $.
+2. *Tell jQuery where your file is located,* and give the function a name (I'm going to use 'bldg'). 
+4. *Call the onEachFeature function* we will define below. `onEachFeature: point_annon`
+5. *Add the points to the map*
+6. *Create a variable* lets call it `point_annon`
+7. *Call the leaflet function* `onEachFeature`. As above, this must be defined for two parameters:  `feature` and `layer`. Whatever information we include in this function will be called once for each feature (basically each row) in our GeoJSON file. 
+8. *Define the action* we want called for each feature: 
+	* If the PointAnnotations.geojson file has properties (attribute information) and has a column named `Descr`
+	* Then create a variable called `pointsPopup`. 
+	* Inside that variable store the value of the `Name` column in the RoadLines.geojson file, the `ImgURL` column, and the `Descr` colum. 
+	* Then use html tags to format these elements, creating line breaks `<br/>` between each and setting the size of the image `'" width ="300px"/>'`. 
+	* Use the `.bindPopup()` leaflet method to attach the content of the pointsPopup to each element in the bldg layer
+
+```javascript
+//load GeoJSON file containing points
+	$.getJSON('data/PointAnnotations.geojson',function(bldg){
+		L.geoJson(bldg,{
+			onEachFeature: point_annon
+	    }).addTo(map);
+	});
+
+//define popup content for point annotations
+	var point_annon = function onEachFeature(feature, layer) {
+	    if (feature.properties && feature.properties.Descr) {
+	    	var pointsPopup = feature.properties.Name + '<br/> <img src="'+ feature.properties.ImgURL + '" width ="300px"/> <br/>' + feature.properties.Descr;
+	        layer.bindPopup(pointsPopup);
+	    }
+	}
+```
+9. *Save your file and refresh* your browser. 
+![img](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/blob/master/Tutorials/Images/Webmaps/06_ImagePopup.png)
+
+**Add NYPL Map Warper Raster Tiles**
+As we reviewed yesterday the New York Public Library's Map Warper site is a tremendous resource for historical maps that are in the public domain, and many of which are already georeferenced. 
+
+In addition the NYPL has make it possible to access these historical maps directly from within a webpage. On the [Export page](http://maps.nypl.org/warper/maps/18631#Export_tab) for each georeferenced map within the NYPL Map Warper collection has a link to the map's information in the "Tiles (Google/OSM scheme)." This link allows us to add any of these maps to our webpage in the same way we added the Open Street Map tileLayer. 
+
+1. *Call the .tileLayer method* `L.tileLayer('http://maps.nypl.org/warper/maps/tile/27688/{z}/{x}/{y}.png').addTo(map);`
+
+Explore the NYPL Map Warper collection and experiment with pulling in additional maps. 
+
+
+The full completed code for this example is available here: 
 
 ```html
+
 
 <html>
 <head>
@@ -300,7 +354,7 @@ We will now add popups for each of our road lines.
 	<script src="js/jquery-2.1.1.min.js">  </script>
 
 	<style>
-	#map{position:absolute; top:0; bottom:0; width: 100%;}
+	#map{position:absolute; top:0; bottom:0; left:0; width: 100%;}
 	</style>
 
 
