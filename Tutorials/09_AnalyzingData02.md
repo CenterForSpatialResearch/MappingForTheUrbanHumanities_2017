@@ -3,7 +3,7 @@
 ### Analyzing Data 04: Schools, Libraries and Density Mapping
 #### Premise
 
-In Part Three of this exercise we analyzed which areas of New York have the greatest access to libraries, now we are interested in answering a slightly different question: which areas have the highest concentration of libraries? Which have the highest concentration of schools? 
+In this exercise we are interested in answering two questions: which areas of New York City have the highest concentration of libraries? And which areas have the highest concentration of schools?
 
 We will create a density map to do this – this is a very common type of map that is often used to construct persuasive arguments but it can also be incredibly misleading. 
 
@@ -99,4 +99,4 @@ What are the key differences between each of these density maps? What conclusion
 
 ______________________________________________________________________________________________________________
 
-Tutorial written by Dare Brawley, for *Mapping for the Urban Humanities*, a intensive workshop for Columbia University faculty taught in Summer 2016 by the [Center for Spatial Research](http://c4sr.columbia.edu). More information about the course is available [here](http://c4sr.columbia.edu/courses/mapping-urban-humanities-summer-bootcamp).
+Tutorial written by Dare Brawley, for *Mapping for the Urban Humanities*, a intensive workshop for Columbia University faculty taught in Summer 2017 by the [Center for Spatial Research](http://c4sr.columbia.edu). More information about the course is available [here](http://c4sr.columbia.edu/courses/mapping-urban-humanities-summer-bootcamp).
