@@ -13,9 +13,7 @@ With this exercise you will learn how to create a basic web-based map using the 
 
 With this exercise our goal is to create a simple interactive online map that shows the New York Botanical Garden just after it was initially constructed and annotates several important buildings and roads at the NYBG. We will use the 1902 Bronx map (that we georeferenced in the previous exercise) as well as some of the features we digitized adding additional annotations. 
 
-For context lets take a look at what this final map will look like: 
-
-******link to map + screenshot*******
+For context lets take a look at what this final map will look like. It is visible [here](https://centerforspatialresearch.github.io/MappingForTheUrbanHumanities_2017/Class_Data/3_Webmaps/)
 
 To accomplish this we will be using Leaflet.js, an incredibly well documented javascript library with many online easily accessible examples to learn from. Review the [Docs](http://leafletjs.com/reference-1.0.3.html) page for explanations of all of the functions in the leaflet library. 
 
