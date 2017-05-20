@@ -3,7 +3,7 @@
 
 >Dare Brawley, Eric Glass, Leah Meisterlin, Grant Wythoff 
 
->May 22, 2016 – June 9, 2016 | 1:00-5:30 pm 
+>May 22, 2017 – June 9, 2017 | 1:00-5:30 pm 
 
 >Studio@Butler & 300 S Buell Hall
 
