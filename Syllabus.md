@@ -9,15 +9,16 @@
 
 ### Description
 
-*Mapping for the Urban Humanities* is an intensive workshop on digital mapping designed for humanities faculty from Columbia University and offered through the Center for Spatial Research at the Columbia University Graduate School of Architecture, Planning, and Preservation with support from the Office of the Dean of Humanities.  
+*Mapping for the Urban Humanities* is an intensive institute on digital mapping designed for faculty and advanced graduate students at Columbia University. It is offered through the Center for Spatial Research at the Columbia University Graduate School of Architecture, Planning, and Preservation with support from the Office of the Dean of Humanities.  
 
-This hands-on workshop is intended to broaden and transform the disciplinary locations within which data analysis takes place. The workshop will introduce participating faculty to open-source mapping software, QGIS, to methods of data collection and creation, and to approaches and concepts in critical spatial analysis. With support from the course’s four instructors, participants will incorporate newly-acquired spatial analysis skills into course assignments and syllabi. The ultimate aim of the summer intensive is to equip faculty with tools to transform their humanities courses into places where students learn data analytical skills and apply them to humanistic questions. 
+This hands-on workshop course is intended to broaden and transform the disciplinary locations within which data analysis takes place. This course will introduce participants to open-source mapping software, QGIS, to methods of data collection and creation, and to approaches and concepts in critical spatial analysis. With support from the course’s four instructors, participating faculty will incorporate newly-acquired spatial analysis skills into course assignments and syllabi as well as research plans. One aim of the summer intensive is to equip faculty with tools to transform their humanities courses into places where students learn spatial data analytical skills and apply them to humanistic questions. 
 
-The course condenses topics from a semester long introductory GIS course into a two-week hands-on intensive. Skills based tutorials draw on diverse datasets relevant to investigations in the urban humanities, including: CEISEN’s Gridded Population of the World, UN Population Division national population estimates, the National Historic Geographic Information System’s historic census records, historical rail lines from the University of Nebraska’s Digital History Project, Reference USA records for music industry businesses, American Community Survey demographic data, New York State Board of Education records of schools, and scanned historical maps from Columbia University’s map collection. Course tutorials and lectures have been developed concurrently and will expose faculty to critical approaches in GIS, introductory spatial analysis methods, and modes of data creation.
+The course condenses topics from a semester long introductory GIS course into a two-week hands-on intensive and one-week practicum. Skills based tutorials draw on diverse datasets relevant to investigations in the urban humanities, including: CEISEN’s Gridded Population of the World, UN Population Division national population estimates, the National Historic Geographic Information System’s historic census records, historical rail lines from the University of Nebraska’s Digital History Project, Reference USA records for music industry businesses, American Community Survey demographic data, New York State Board of Education records of schools, and scanned historical maps from Columbia University’s map collection. Course tutorials and lectures have been developed concurrently and will expose faculty to critical approaches in GIS, introductory spatial analysis methods, and modes of data creation.
 
 
 ### Structure and Rhythm: 
-Over the course of the first two weeks (May 22-June 2), faculty will learn critical methods in digital mapping and data collection through the use of open-source software (QGIS). The course will meet for 4.5 hours each day in an intensive workshop and lab format. The third week (June 5-9) will focus on bolstering skills development and on how to incorporate newly acquired skills into course assignments and syllabi, using the syllabi submitted with the application to the course as a starting point. During the third week participation is optional and will be scheduled in individual skill and syllabus workshop sessions. 
+Over the course of the first two weeks (May 22-June 2), participants will learn critical methods in digital mapping and data collection through the use of open-source software (QGIS). The course will meet for 4.5 hours each day in an intensive workshop and lab format. The third week (June 6 -10) will focus on how to incorporate newly acquired skills into research and course assignments and syllabi, using the syllabi or research brief submitted with the application to the course as a starting point. During the third week participation is optional and will be scheduled in individual (or small group) workshop sessions. 
+
 
 ### Course Goals: 
 The course aims to equip faculty with a grasp of the methods and methodologies of Geographic Information Systems so that they can introduce critical spatial pedagogies into their teaching and research. Through the course faculty will:   
@@ -34,12 +35,12 @@ The course aims to equip faculty with a grasp of the methods and methodologies o
 ### Materials 
 * Laptop with QGIS 2.14 installed (see instructions [here](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/blob/master/Resources/DownloadingQGIS.md))
 * A three button mouse
-* All course tutorials will be provided and available via [Github](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/tree/master/Tutorials)
-* A three button mouse (this is highly *highly* recommended)
+* In addition to printed copies distributed on the first day, all course tutorials are available via [Github](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/tree/master/Tutorials)
+* A three button mouse (this is highly *highly* encouraged)
 * Optional: a 16 GB flash drive to store course data + exercises
 
 ## Background on CSR 
-The Center for Spatial Research was established in 2015 as a hub for urban research that links design, architecture, urbanism, the humanities and data science. It sponsors research and curricular activities built around new technologies of mapping, data visualization, data collection, and data analysis. CSR focuses on data literacy as well as interrogating the world of 'big data,' working to open up new areas of research and inquiry with advanced design tools to help scholars, students as well as our collaborators and audiences, to understand cities worldwide – past present and future.
+The Center for Spatial Research was established in 2015, through a generous grant from the Andrew W. Mellon Foundation, as a hub for urban research that links design, architecture, urbanism, the humanities and data science. It sponsors research and curricular activities built around new technologies of mapping, data visualization, data collection, and data analysis. CSR focuses on data literacy as well as interrogating the world of 'big data,' working to open up new areas of urban research and inquiry. 
 
 Our projects generally involve collaborations with researchers and advocates across a variety of disciplines and institutions, working with them to communicate information clearly, critically, responsibly, and provocatively. We are committed to rigorous and reliable work with data; to harnessing the most powerful techniques of design and visualization; and to a critical reflection on the limits and ideologies of both data and its representation. Based in the disciplines of design, architecture and urbanism we make links with and bring spatial expertise to the humanities as well as the sciences.
 
@@ -69,7 +70,7 @@ Studio@Butler
 
 **Thursday, May 25 | Making Data 01**
 300 S Buell Hall
-* **Topics:** Where GIS Data Comes From, Georeferencing, Digitizing 	
+* **Topics:** Where GIS Data Comes From, Georeferencing 	
 						
 * **Tutorial:** 
 	* [Making Data 01](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/blob/master/Tutorials/04_MakingData01.md): Working with Historical Maps
