@@ -1,27 +1,29 @@
 
 ### Designing Assignments and Methods
 
-Over the course of Week Two you will work in your groups/pairs to take the research question(s) and datasets you identified in Week One and develop a "prototype" of your course assignment or research agenda. On Friday each group/pair will give a short presentation about their "prototype" and the process of making it.
+Over the course of Week Two you will work in your groups/pairs to take the research question(s) and datasets you identified in Week One and develop a draft of your course assignment or research agenda. **Each of these will need to quite explicitly frame a spatial question and consider the kinds of maps and data that the spatial question will engage.** We are not asking you to develop full projects/courses in two days – but rather to create “prototypes” (a draft of the framing elements of your course or project). On Friday each group/pair will give a short presentation (7 min) about their assignments or research agenda, and the process of making it. 
 
-The goal here is to apply some of the concepts and methods you have learned in the past two weeks to your group's topic. 
+The goal here is to apply and test some of the concepts and methods you have learned in the past two weeks to your group's topics, by creating an actual artifact (see below).
+
 
 These group presentations will open onto a structured conversation about the kinds of new methodological and pedagogical approaches spatial thinking might allow, as well as the challenges often present when embarking on a mapping project on your own. 
 
 #### Prototype Requirements
 
-The form of your prototype should speak to the concerns of your group's topic and must include at least one map (static or web based).
+The form of your prototype should speak to the concerns of your group's topic and clarify the spatial question(s) you are asking your students to answer. It must also include at least one map (static or web based). 
 
-The requirements for these "prototypes" are purposefully broad. Feel free to draw on the methods and concepts covered in course tutorials, the course bibliography, examples from the geohumanities as inspiration. 
-
-If you are designing an assignment your prototype might include:
-* the description of your assignment
-* data cleaned for your students
+If you are designing an assignment your prototype must include at least:  
+* the description of your assignment 
+* data cleaned for your students (or a guide for where your students should go to seek out their own datasets)
 * some draft maps that are examples of what you would like you students to produce
 
-If you are designing a research project your prototype might include:
+If you are designing a research project your prototype must include at least:
 * an outline of a research methodology
 * some preliminary analytical or descriptive maps
 * a list of further data sets you need to find or produce
+* a list of other maps you would like to produce
+
+The requirements for these "prototypes" are a starting point and are purposefully broad. Feel free to draw on the methods and concepts covered in course tutorials, the course bibliography, examples from the geohumanities as inspiration. 
 
 
 #### Presentations 
