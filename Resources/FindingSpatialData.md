@@ -1,6 +1,8 @@
 ## A Few Resources for Researching Spatial Data
 
-* Columbia University Libraries, specifically the [Digital Social Sciences Center](http://library.columbia.edu/locations/dssc/data/service.html) (DSSC), at Lehman Library 
+**Places to Start**
+
+* Columbia University Libraries, specifically the [Digital Social Sciences Center](http://library.columbia.edu/locations/dssc/data/service.html) (DSSC), at Lehman Library:
 	* The DSSC maintains the Columbia University [Spatial Data Catalog](https://geodata.library.columbia.edu) which lists all spatial data held by the Columbia Libraries
 	* The DSSC also maintains research guides for how to find spatial data from other sources and libraries. 
 
@@ -10,7 +12,7 @@ The following are a few links to major resources for researching digitized histo
 
 **Places to Start**
 
-* Columbia University Libraries, specifically the [Digital Social Sciences Center,](http://library.columbia.edu/locations/dssc/data/service.html) at Lehman Library
+* Columbia University Libraries, specifically the [Digital Social Sciences Center,](http://library.columbia.edu/locations/dssc/data/service.html) at Lehman Library:
 	* The DSSC is the home of the [Lehman Map Collection](http://library.columbia.edu/locations/maps/about.html)
 	* [GeoData @ Columbia](http://geodata.cul.columbia.edu) is a tool for searching Columbia's spatial data holdings including historical maps, by location. 
 
