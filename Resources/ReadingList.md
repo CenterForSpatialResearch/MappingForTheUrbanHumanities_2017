@@ -33,6 +33,9 @@ Monmonier, Mark. How to Lie with Maps. Chicago: University of Chicago Press, 199
 
 Tufte, Edward. Envisioning Information: Narratives of Space and Time. Cheshire, CT: Graphics Press, 1990.
 
+McHarg, Ian L. 1969. Design with Nature. Garden City, N.Y.: Published for the American Museum of Natural History [by] the Natural History Press.
+
+
 **GeoHumanities**
 Dear, Michael, Jim Ketchum, Sarah Luria, Doug Richardson. GeoHumanities: Art, History, Text at the Edge of Place.
 
