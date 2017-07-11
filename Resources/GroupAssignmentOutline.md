@@ -60,10 +60,10 @@ On *Friday, June 2* you will have 2.5 hours to work with your group and the cour
 #### Some Resources
 
 * GeoHumanities Project examples you discussed in groups:
-  * [HyperCities](goo.gl/FhUCJo)
-  * [Foreign Born Population 1850 - 1910](goo.gl/yBYySv)
-  * [Z-Axis Mapping Tool](goo.gl/HrZKug)
-  * [Array of Things](goo.gl/dhNwNg)
+  * [HyperCities](http://www.hypercities.com)
+  * [Foreign Born Population 1850 - 1910](http://dsl.richmond.edu/panorama/foreignborn/#decade=2010)
+  * [Z-Axis Mapping Tool](http://zaxis.uvic.ca)
+  * [Array of Things](https://arrayofthings.github.io)
 
 * [Course bibliography](https://github.com/CenterForSpatialResearch/MappingForTheUrbanHumanities_2017/blob/master/Resources/ReadingList.md)
 
