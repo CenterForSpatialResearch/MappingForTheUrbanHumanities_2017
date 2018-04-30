@@ -10,7 +10,7 @@ Overviews
 --------------------
 
 - Franco Moretti, *Graphs Maps Trees: Abstract Models for Literary History* (Verso, 2005): the one book to read in this domain, if you read just one. It is not explicitly “digital,” but it makes the most important argument for the kinds of literary-historical methods that now seem to require computers.
-- [*Debates in the Digital Humanities*](http://dhdebates.gc.cuny.edu/) (University of Minnesota Press, 2013) and its sequel, *Debates in the Digital Humanities 2016*, edited by Matthew K. Gold an dLauren Klein: useful, large collections of short position papers.
+- [*Debates in the Digital Humanities*](http://dhdebates.gc.cuny.edu/) (University of Minnesota Press, 2013) and its sequel, *Debates in the Digital Humanities 2016*, edited by Matthew K. Gold and Lauren Klein: useful, large collections of short position papers.
 - [*A Companion to Digital Humanities*](http://www.digitalhumanities.org/companion/), ed. Susan Schreibman, Ray Siemens, and John Unsworth (Blackwell, 2008):  This overview of humanities computing is dated but revealing about the history of DH.
 
 Journals
